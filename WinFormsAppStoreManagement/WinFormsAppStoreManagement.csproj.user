@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="GUI\MainForms\FormConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\MainForms\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Modals\FormBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Modals\FormCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Modals\FormNowLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Modals\FormOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Modals\FormProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Modals\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Modals\UCProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\SubForms\FormProductManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\SubForms\FormCustomerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\SubForms\FormOrderManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\SubForms\FormBillManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\SubForms\FormSettingManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\MainForms\FormMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
