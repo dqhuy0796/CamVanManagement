@@ -123,6 +123,16 @@ namespace WinFormsAppStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_down_16 {
+            get {
+                object obj = ResourceManager.GetObject("black-down-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_down_32 {
             get {
                 object obj = ResourceManager.GetObject("black-down-32", resourceCulture);
@@ -313,6 +323,16 @@ namespace WinFormsAppStoreManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap black_up_16 {
+            get {
+                object obj = ResourceManager.GetObject("black-up-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_up_32 {
             get {
                 object obj = ResourceManager.GetObject("black-up-32", resourceCulture);
@@ -416,6 +436,16 @@ namespace WinFormsAppStoreManagement.Properties {
         internal static System.Drawing.Bitmap white_customer_32 {
             get {
                 object obj = ResourceManager.GetObject("white-customer-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_down_16 {
+            get {
+                object obj = ResourceManager.GetObject("white-down-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -616,6 +646,16 @@ namespace WinFormsAppStoreManagement.Properties {
         internal static System.Drawing.Bitmap white_timer_32 {
             get {
                 object obj = ResourceManager.GetObject("white-timer-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_up_16 {
+            get {
+                object obj = ResourceManager.GetObject("white-up-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

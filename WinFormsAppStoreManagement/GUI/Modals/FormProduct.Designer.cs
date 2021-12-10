@@ -45,7 +45,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlDescription = new System.Windows.Forms.Panel();
             this.txtDescription = new Sunny.UI.UITextBox();
             this.lblDescription = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlInfo = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtQuantity = new Sunny.UI.UITextBox();
@@ -77,7 +77,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlSaveAndQuitButton.SuspendLayout();
             this.pnlContainer.SuspendLayout();
             this.pnlDescription.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlInfo.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlAddress.SuspendLayout();
@@ -165,10 +165,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlRemoveButton.BackColor = System.Drawing.Color.Transparent;
             this.pnlRemoveButton.Controls.Add(this.btnRemove);
             this.pnlRemoveButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRemoveButton.Location = new System.Drawing.Point(258, 20);
+            this.pnlRemoveButton.Location = new System.Drawing.Point(228, 20);
             this.pnlRemoveButton.Name = "pnlRemoveButton";
             this.pnlRemoveButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pnlRemoveButton.Size = new System.Drawing.Size(120, 32);
+            this.pnlRemoveButton.Size = new System.Drawing.Size(130, 32);
             this.pnlRemoveButton.TabIndex = 18;
             this.pnlRemoveButton.Visible = false;
             // 
@@ -185,13 +185,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnRemove.Location = new System.Drawing.Point(20, 0);
             this.btnRemove.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Radius = 16;
+            this.btnRemove.Radius = 30;
             this.btnRemove.RectColor = System.Drawing.Color.White;
             this.btnRemove.RectDisableColor = System.Drawing.Color.White;
             this.btnRemove.RectHoverColor = System.Drawing.Color.White;
             this.btnRemove.RectPressColor = System.Drawing.Color.White;
             this.btnRemove.RectSelectedColor = System.Drawing.Color.White;
-            this.btnRemove.Size = new System.Drawing.Size(100, 32);
+            this.btnRemove.Size = new System.Drawing.Size(110, 32);
             this.btnRemove.Style = Sunny.UI.UIStyle.Custom;
             this.btnRemove.StyleCustomMode = true;
             this.btnRemove.TabIndex = 18;
@@ -203,10 +203,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlModifyButton.BackColor = System.Drawing.Color.Transparent;
             this.pnlModifyButton.Controls.Add(this.btnModify);
             this.pnlModifyButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlModifyButton.Location = new System.Drawing.Point(378, 20);
+            this.pnlModifyButton.Location = new System.Drawing.Point(358, 20);
             this.pnlModifyButton.Name = "pnlModifyButton";
             this.pnlModifyButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pnlModifyButton.Size = new System.Drawing.Size(120, 32);
+            this.pnlModifyButton.Size = new System.Drawing.Size(130, 32);
             this.pnlModifyButton.TabIndex = 16;
             this.pnlModifyButton.Visible = false;
             // 
@@ -223,13 +223,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnModify.Location = new System.Drawing.Point(20, 0);
             this.btnModify.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Radius = 16;
+            this.btnModify.Radius = 30;
             this.btnModify.RectColor = System.Drawing.Color.White;
             this.btnModify.RectDisableColor = System.Drawing.Color.White;
             this.btnModify.RectHoverColor = System.Drawing.Color.White;
             this.btnModify.RectPressColor = System.Drawing.Color.White;
             this.btnModify.RectSelectedColor = System.Drawing.Color.White;
-            this.btnModify.Size = new System.Drawing.Size(100, 32);
+            this.btnModify.Size = new System.Drawing.Size(110, 32);
             this.btnModify.Style = Sunny.UI.UIStyle.Custom;
             this.btnModify.StyleCustomMode = true;
             this.btnModify.TabIndex = 1;
@@ -249,13 +249,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnCancel.Location = new System.Drawing.Point(20, 20);
             this.btnCancel.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Radius = 16;
+            this.btnCancel.Radius = 30;
             this.btnCancel.RectColor = System.Drawing.Color.White;
             this.btnCancel.RectDisableColor = System.Drawing.Color.White;
             this.btnCancel.RectHoverColor = System.Drawing.Color.White;
             this.btnCancel.RectPressColor = System.Drawing.Color.White;
             this.btnCancel.RectSelectedColor = System.Drawing.Color.White;
-            this.btnCancel.Size = new System.Drawing.Size(100, 32);
+            this.btnCancel.Size = new System.Drawing.Size(110, 32);
             this.btnCancel.Style = Sunny.UI.UIStyle.Custom;
             this.btnCancel.StyleCustomMode = true;
             this.btnCancel.TabIndex = 14;
@@ -267,10 +267,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlSaveAndQuitButton.BackColor = System.Drawing.Color.Transparent;
             this.pnlSaveAndQuitButton.Controls.Add(this.btnSaveAndQuit);
             this.pnlSaveAndQuitButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlSaveAndQuitButton.Location = new System.Drawing.Point(498, 20);
+            this.pnlSaveAndQuitButton.Location = new System.Drawing.Point(488, 20);
             this.pnlSaveAndQuitButton.Name = "pnlSaveAndQuitButton";
             this.pnlSaveAndQuitButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pnlSaveAndQuitButton.Size = new System.Drawing.Size(120, 32);
+            this.pnlSaveAndQuitButton.Size = new System.Drawing.Size(130, 32);
             this.pnlSaveAndQuitButton.TabIndex = 12;
             this.pnlSaveAndQuitButton.Visible = false;
             // 
@@ -287,13 +287,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnSaveAndQuit.Location = new System.Drawing.Point(20, 0);
             this.btnSaveAndQuit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSaveAndQuit.Name = "btnSaveAndQuit";
-            this.btnSaveAndQuit.Radius = 16;
+            this.btnSaveAndQuit.Radius = 30;
             this.btnSaveAndQuit.RectColor = System.Drawing.Color.White;
             this.btnSaveAndQuit.RectDisableColor = System.Drawing.Color.White;
             this.btnSaveAndQuit.RectHoverColor = System.Drawing.Color.White;
             this.btnSaveAndQuit.RectPressColor = System.Drawing.Color.White;
             this.btnSaveAndQuit.RectSelectedColor = System.Drawing.Color.White;
-            this.btnSaveAndQuit.Size = new System.Drawing.Size(100, 32);
+            this.btnSaveAndQuit.Size = new System.Drawing.Size(110, 32);
             this.btnSaveAndQuit.Style = Sunny.UI.UIStyle.Custom;
             this.btnSaveAndQuit.StyleCustomMode = true;
             this.btnSaveAndQuit.TabIndex = 1;
@@ -304,7 +304,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             // 
             this.pnlContainer.BackColor = System.Drawing.Color.White;
             this.pnlContainer.Controls.Add(this.pnlDescription);
-            this.pnlContainer.Controls.Add(this.panel1);
+            this.pnlContainer.Controls.Add(this.pnlInfo);
             this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContainer.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.pnlContainer.Location = new System.Drawing.Point(1, 73);
@@ -319,10 +319,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlDescription.Controls.Add(this.txtDescription);
             this.pnlDescription.Controls.Add(this.lblDescription);
             this.pnlDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDescription.Location = new System.Drawing.Point(15, 302);
+            this.pnlDescription.Location = new System.Drawing.Point(15, 260);
             this.pnlDescription.Name = "pnlDescription";
             this.pnlDescription.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlDescription.Size = new System.Drawing.Size(608, 182);
+            this.pnlDescription.Size = new System.Drawing.Size(608, 224);
             this.pnlDescription.TabIndex = 13;
             // 
             // txtDescription
@@ -341,7 +341,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Radius = 8;
             this.txtDescription.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtDescription.Size = new System.Drawing.Size(598, 145);
+            this.txtDescription.Size = new System.Drawing.Size(598, 187);
             this.txtDescription.Style = Sunny.UI.UIStyle.Colorful;
             this.txtDescription.StyleCustomMode = true;
             this.txtDescription.TabIndex = 1;
@@ -358,16 +358,16 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.lblDescription.Text = "Mô tả";
             this.lblDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel1
+            // pnlInfo
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(15, 10);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(608, 292);
-            this.panel1.TabIndex = 12;
+            this.pnlInfo.Controls.Add(this.panel3);
+            this.pnlInfo.Controls.Add(this.panel2);
+            this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlInfo.Location = new System.Drawing.Point(15, 10);
+            this.pnlInfo.Name = "pnlInfo";
+            this.pnlInfo.Padding = new System.Windows.Forms.Padding(5);
+            this.pnlInfo.Size = new System.Drawing.Size(608, 250);
+            this.pnlInfo.TabIndex = 12;
             // 
             // panel3
             // 
@@ -380,7 +380,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(205, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(398, 282);
+            this.panel3.Size = new System.Drawing.Size(398, 240);
             this.panel3.TabIndex = 2;
             // 
             // panel4
@@ -389,10 +389,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel4.Controls.Add(this.txtQuantity);
             this.panel4.Controls.Add(this.lblQuantity);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 235);
+            this.panel4.Location = new System.Drawing.Point(0, 200);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.panel4.Size = new System.Drawing.Size(398, 47);
+            this.panel4.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.panel4.Size = new System.Drawing.Size(398, 40);
             this.panel4.TabIndex = 18;
             // 
             // txtQuantity
@@ -410,7 +410,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Radius = 8;
             this.txtQuantity.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtQuantity.Size = new System.Drawing.Size(288, 27);
+            this.txtQuantity.Size = new System.Drawing.Size(288, 30);
             this.txtQuantity.Style = Sunny.UI.UIStyle.Colorful;
             this.txtQuantity.StyleCustomMode = true;
             this.txtQuantity.TabIndex = 1;
@@ -422,7 +422,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblQuantity.Location = new System.Drawing.Point(10, 10);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(100, 27);
+            this.lblQuantity.Size = new System.Drawing.Size(100, 30);
             this.lblQuantity.TabIndex = 0;
             this.lblQuantity.Text = "Số lượng còn";
             this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -433,10 +433,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlAddress.Controls.Add(this.txtPrice);
             this.pnlAddress.Controls.Add(this.lblPrice);
             this.pnlAddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlAddress.Location = new System.Drawing.Point(0, 188);
+            this.pnlAddress.Location = new System.Drawing.Point(0, 160);
             this.pnlAddress.Name = "pnlAddress";
-            this.pnlAddress.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.pnlAddress.Size = new System.Drawing.Size(398, 47);
+            this.pnlAddress.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnlAddress.Size = new System.Drawing.Size(398, 40);
             this.pnlAddress.TabIndex = 17;
             // 
             // txtPrice
@@ -454,7 +454,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Radius = 8;
             this.txtPrice.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtPrice.Size = new System.Drawing.Size(288, 27);
+            this.txtPrice.Size = new System.Drawing.Size(288, 30);
             this.txtPrice.Style = Sunny.UI.UIStyle.Colorful;
             this.txtPrice.StyleCustomMode = true;
             this.txtPrice.TabIndex = 1;
@@ -466,7 +466,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.lblPrice.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblPrice.Location = new System.Drawing.Point(10, 10);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(100, 27);
+            this.lblPrice.Size = new System.Drawing.Size(100, 30);
             this.lblPrice.TabIndex = 0;
             this.lblPrice.Text = "Đơn giá";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -477,10 +477,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlCIC.Controls.Add(this.txtUnit);
             this.pnlCIC.Controls.Add(this.lblUnit);
             this.pnlCIC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCIC.Location = new System.Drawing.Point(0, 141);
+            this.pnlCIC.Location = new System.Drawing.Point(0, 120);
             this.pnlCIC.Name = "pnlCIC";
-            this.pnlCIC.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.pnlCIC.Size = new System.Drawing.Size(398, 47);
+            this.pnlCIC.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnlCIC.Size = new System.Drawing.Size(398, 40);
             this.pnlCIC.TabIndex = 16;
             // 
             // txtUnit
@@ -498,7 +498,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Radius = 8;
             this.txtUnit.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtUnit.Size = new System.Drawing.Size(288, 27);
+            this.txtUnit.Size = new System.Drawing.Size(288, 30);
             this.txtUnit.Style = Sunny.UI.UIStyle.Colorful;
             this.txtUnit.StyleCustomMode = true;
             this.txtUnit.TabIndex = 1;
@@ -510,7 +510,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.lblUnit.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblUnit.Location = new System.Drawing.Point(10, 10);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(100, 27);
+            this.lblUnit.Size = new System.Drawing.Size(100, 30);
             this.lblUnit.TabIndex = 0;
             this.lblUnit.Text = "Đơn vị tính";
             this.lblUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -522,10 +522,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlTel.Controls.Add(this.panel5);
             this.pnlTel.Controls.Add(this.lblCategory);
             this.pnlTel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTel.Location = new System.Drawing.Point(0, 94);
+            this.pnlTel.Location = new System.Drawing.Point(0, 80);
             this.pnlTel.Name = "pnlTel";
-            this.pnlTel.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.pnlTel.Size = new System.Drawing.Size(398, 47);
+            this.pnlTel.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnlTel.Size = new System.Drawing.Size(398, 40);
             this.pnlTel.TabIndex = 15;
             // 
             // cboCategory
@@ -541,7 +541,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.cboCategory.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboCategory.Radius = 8;
             this.cboCategory.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.cboCategory.Size = new System.Drawing.Size(251, 27);
+            this.cboCategory.Size = new System.Drawing.Size(251, 30);
             this.cboCategory.Style = Sunny.UI.UIStyle.Colorful;
             this.cboCategory.StyleCustomMode = true;
             this.cboCategory.TabIndex = 3;
@@ -555,7 +555,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel5.Location = new System.Drawing.Point(361, 10);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.panel5.Size = new System.Drawing.Size(37, 27);
+            this.panel5.Size = new System.Drawing.Size(37, 30);
             this.panel5.TabIndex = 1;
             // 
             // btnAddCategory
@@ -575,7 +575,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnAddCategory.RectHoverColor = System.Drawing.Color.White;
             this.btnAddCategory.RectPressColor = System.Drawing.Color.White;
             this.btnAddCategory.RectSelectedColor = System.Drawing.Color.White;
-            this.btnAddCategory.Size = new System.Drawing.Size(27, 27);
+            this.btnAddCategory.Size = new System.Drawing.Size(27, 30);
             this.btnAddCategory.Style = Sunny.UI.UIStyle.Custom;
             this.btnAddCategory.StyleCustomMode = true;
             this.btnAddCategory.TabIndex = 0;
@@ -586,7 +586,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.lblCategory.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblCategory.Location = new System.Drawing.Point(10, 10);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(100, 27);
+            this.lblCategory.Size = new System.Drawing.Size(100, 30);
             this.lblCategory.TabIndex = 0;
             this.lblCategory.Text = "Danh mục";
             this.lblCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -597,10 +597,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlName.Controls.Add(this.txtName);
             this.pnlName.Controls.Add(this.lblName);
             this.pnlName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlName.Location = new System.Drawing.Point(0, 47);
+            this.pnlName.Location = new System.Drawing.Point(0, 40);
             this.pnlName.Name = "pnlName";
-            this.pnlName.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.pnlName.Size = new System.Drawing.Size(398, 47);
+            this.pnlName.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnlName.Size = new System.Drawing.Size(398, 40);
             this.pnlName.TabIndex = 14;
             // 
             // txtName
@@ -618,7 +618,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtName.Name = "txtName";
             this.txtName.Radius = 8;
             this.txtName.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtName.Size = new System.Drawing.Size(288, 27);
+            this.txtName.Size = new System.Drawing.Size(288, 30);
             this.txtName.Style = Sunny.UI.UIStyle.Colorful;
             this.txtName.StyleCustomMode = true;
             this.txtName.TabIndex = 1;
@@ -630,7 +630,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.lblName.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblName.Location = new System.Drawing.Point(10, 10);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(100, 27);
+            this.lblName.Size = new System.Drawing.Size(100, 30);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Tên mặt hàng";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -643,8 +643,8 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlId.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlId.Location = new System.Drawing.Point(0, 0);
             this.pnlId.Name = "pnlId";
-            this.pnlId.Padding = new System.Windows.Forms.Padding(10, 10, 0, 10);
-            this.pnlId.Size = new System.Drawing.Size(398, 47);
+            this.pnlId.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pnlId.Size = new System.Drawing.Size(398, 40);
             this.pnlId.TabIndex = 13;
             // 
             // txtId
@@ -663,7 +663,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtId.Radius = 8;
             this.txtId.ReadOnly = true;
             this.txtId.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtId.Size = new System.Drawing.Size(288, 27);
+            this.txtId.Size = new System.Drawing.Size(288, 30);
             this.txtId.Style = Sunny.UI.UIStyle.Colorful;
             this.txtId.StyleCustomMode = true;
             this.txtId.TabIndex = 1;
@@ -675,7 +675,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.lblId.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblId.Location = new System.Drawing.Point(10, 10);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(100, 27);
+            this.lblId.Size = new System.Drawing.Size(100, 30);
             this.lblId.TabIndex = 0;
             this.lblId.Text = "Mã mặt hàng";
             this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -687,8 +687,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(5, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.panel2.Size = new System.Drawing.Size(200, 282);
+            this.panel2.Size = new System.Drawing.Size(200, 240);
             this.panel2.TabIndex = 0;
             // 
             // btnUploadPicture
@@ -702,16 +701,16 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnUploadPicture.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnUploadPicture.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnUploadPicture.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUploadPicture.Location = new System.Drawing.Point(50, 232);
+            this.btnUploadPicture.Location = new System.Drawing.Point(50, 210);
             this.btnUploadPicture.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnUploadPicture.Name = "btnUploadPicture";
-            this.btnUploadPicture.Radius = 16;
+            this.btnUploadPicture.Radius = 28;
             this.btnUploadPicture.RectColor = System.Drawing.Color.White;
             this.btnUploadPicture.RectDisableColor = System.Drawing.Color.White;
             this.btnUploadPicture.RectHoverColor = System.Drawing.Color.White;
             this.btnUploadPicture.RectPressColor = System.Drawing.Color.White;
             this.btnUploadPicture.RectSelectedColor = System.Drawing.Color.White;
-            this.btnUploadPicture.Size = new System.Drawing.Size(100, 32);
+            this.btnUploadPicture.Size = new System.Drawing.Size(100, 30);
             this.btnUploadPicture.Style = Sunny.UI.UIStyle.Custom;
             this.btnUploadPicture.StyleCustomMode = true;
             this.btnUploadPicture.TabIndex = 1;
@@ -725,7 +724,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.picProduct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.picProduct.Location = new System.Drawing.Point(0, 10);
+            this.picProduct.Location = new System.Drawing.Point(0, 0);
             this.picProduct.Name = "picProduct";
             this.picProduct.Padding = new System.Windows.Forms.Padding(1);
             this.picProduct.Size = new System.Drawing.Size(200, 200);
@@ -760,7 +759,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlSaveAndQuitButton.ResumeLayout(false);
             this.pnlContainer.ResumeLayout(false);
             this.pnlDescription.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnlInfo.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.pnlAddress.ResumeLayout(false);
@@ -789,7 +788,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
         private System.Windows.Forms.Panel pnlDescription;
         private Sunny.UI.UITextBox txtDescription;
         private System.Windows.Forms.Label lblDescription;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlInfo;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private Sunny.UI.UITextBox txtQuantity;

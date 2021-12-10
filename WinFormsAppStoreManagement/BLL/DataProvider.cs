@@ -1,20 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Text;
 
-namespace WinFormsAppStoreManagement.Controller
+namespace WinFormsAppStoreManagement.BLL
 {
     public class DataProvider
     {
         private static string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=StoreManagement;Integrated Security=True";
 
         private static DataProvider instance;
-        public static DataProvider Instance 
+        public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
-            private set { DataProvider.instance = value; } 
+            private set { DataProvider.instance = value; }
         }
         private DataProvider() { }
         // trả về tất cả bảng trong SQL

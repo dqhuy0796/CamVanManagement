@@ -127,8 +127,8 @@
   <data name="black-user-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-user-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white-coin-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\white-coin-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white-arrow-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-arrow-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="black-search-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-search-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,17 +136,17 @@
   <data name="black-lock-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-lock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-price-tag-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\black-price-tag-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white-user-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-user-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-money-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-money-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white-arrow-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\white-arrow-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="white-employee-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-employee-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white-clock-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-clock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-left-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-left-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,14 +157,11 @@
   <data name="white-plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-hamburger-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\black-hamburger-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-supplier-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-supplier-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-statistic-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-statistic-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="white-user-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\white-user-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="black-statistic-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-statistic-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,32 +190,38 @@
   <data name="black-down-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-down-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="black-plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="white-print-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-print-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-plus-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\black-plus-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white-coin-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-coin-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="black-right-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-right-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="white-hamburger-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-hamburger-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="black-employee-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-employee-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-up-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\black-up-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white-lock-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-lock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-account-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-account-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-order-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\black-order-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="White-Rectanngle-Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Logo\White-Rectanngle-Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-price-tag-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-price-tag-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white-material-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\white-material-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-price-tag-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-price-tag-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="black-print-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-print-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,8 +232,8 @@
   <data name="black-coin-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-coin-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white-hamburger-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\white-hamburger-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white-material-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-material-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="black-setting-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-setting-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -240,6 +243,9 @@
   </data>
   <data name="black-money-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-money-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black-clock-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-clock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="black-exit-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-exit-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,14 +259,14 @@
   <data name="white-supplier-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-supplier-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white-lock-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\white-lock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-up-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-up-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="black-menu-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-menu-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-supplier-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\black-supplier-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-hamburger-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-hamburger-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-right-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-right-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,8 +274,8 @@
   <data name="white-customer-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-customer-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="White-Rectanngle-Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Logo\White-Rectanngle-Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-order-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-order-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="white-down-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\white-down-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,10 +292,16 @@
   <data name="black-left-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Icons\black-left-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="white-clock-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\white-clock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="white-down-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-down-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="black-clock-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Icons\black-clock-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="black-down-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-down-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white-up-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\white-up-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="black-up-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Icons\black-up-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

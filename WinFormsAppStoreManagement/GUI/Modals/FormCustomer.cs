@@ -2,8 +2,8 @@
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using WinFormsAppStoreManagement.Controller;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.BLL;
+using WinFormsAppStoreManagement.DAL;
 
 namespace WinFormsAppStoreManagement.UserInterface.Modals
 {

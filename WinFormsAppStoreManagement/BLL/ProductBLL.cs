@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using System.Text;
-using WinFormsAppStoreManagement.BLL;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.DAL;
 
-namespace WinFormsAppStoreManagement.Controller
+namespace WinFormsAppStoreManagement.BLL
 {
     public class ProductBLL
     {
@@ -60,10 +53,10 @@ namespace WinFormsAppStoreManagement.Controller
             string query = "INSERT INTO dbo.Products (ProductName, ProductImage, ProductUnit, ProductPrice, ProductTotalQuantity, CategoryId, ProductDescription) " +
                            "VALUES( @ProductName , @ProductImage , @ProductUnit , @ProductPrice , @ProductTotalQuantity , @CategoryId , @ProductDescription )";
             return DataProvider.Instance.ExecuteNonQuery(
-                query, 
+                query,
                 new object[]
-                { 
-                    product.ProductName, 
+                {
+                    product.ProductName,
                     ImageProcessing.ConvertImageToByteArray(product.ProductImage),
                     product.ProductUnit,
                     product.ProductPrice,
@@ -75,7 +68,8 @@ namespace WinFormsAppStoreManagement.Controller
         }
         public int ModifyProductInDatabaseWithImage(Product product)
         {
-            string query = "UPDATE dbo.Products SET ProductName = @Name , ProductImage = @Image , ProductUnit = @Unit , ProductPrice = @Price , ProductTotalQuantity = @Quantity , CategoryId = @CategoryId , ProductDescription = @Description WHERE ProductId = @Id ";
+            string query = "UPDATE dbo.Products SET ProductName = @Name , ProductImage = @Image , ProductUnit = @Unit , ProductPrice = @Price ," +
+                " ProductTotalQuantity = @Quantity , CategoryId = @CategoryId , ProductDescription = @Description WHERE ProductId = @Id ";
             return DataProvider.Instance.ExecuteNonQuery(
                 query,
                 new object[]
@@ -93,7 +87,8 @@ namespace WinFormsAppStoreManagement.Controller
         }
         public int ModifyProductInDatabaseWithoutImage(Product product)
         {
-            string query = "UPDATE dbo.Products SET ProductName = @Name , ProductUnit = @Unit , ProductPrice = @Price , ProductTotalQuantity = @Quantity , CategoryId = @CategoryId , ProductDescription = @Description WHERE ProductId = @Id ";
+            string query = "UPDATE dbo.Products SET ProductName = @Name , ProductUnit = @Unit , ProductPrice = @Price ," +
+                " ProductTotalQuantity = @Quantity , CategoryId = @CategoryId , ProductDescription = @Description WHERE ProductId = @Id ";
             return DataProvider.Instance.ExecuteNonQuery(
                 query,
                 new object[]

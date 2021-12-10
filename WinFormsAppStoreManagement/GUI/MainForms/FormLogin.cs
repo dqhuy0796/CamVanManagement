@@ -2,7 +2,7 @@
 using System.Data;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using WinFormsAppStoreManagement.Controller;
+using WinFormsAppStoreManagement.BLL;
 using WinFormsAppStoreManagement.DAL;
 
 namespace WinFormsAppStoreManagement.UserInterface.MainForms
@@ -37,6 +37,12 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
         {
             // nothing here - Lmao
         }
+        private void ResetLoginForm()
+        {
+            lblIncorrect.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtUsername.Focus();
+        }
         #endregion
 
         #region Data Methods
@@ -47,7 +53,11 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             {
                 /*None = 0, OK = 1, Cancel = 2, Abort = 3, Retry = 4, Ignore = 5, Yes = 6, No = 7*/
                 LoginAccount = new Account(data.Rows[0]);
-                this.DialogResult = DialogResult.OK;
+                FormMainMenu formMainMenu = new FormMainMenu(LoginAccount);
+                formMainMenu.Show();
+                ResetLoginForm();
+                this.Hide();
+                formMainMenu.LogOut += FormMainMenu_LogOut;
             }
             else
             {
@@ -64,9 +74,18 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
                 }
             }
         }
+
         #endregion
 
         #region Events
+        private void FormMainMenu_LogOut(object sender, EventArgs e)
+        {
+            (sender as FormMainMenu).isExit = false;
+            (sender as FormMainMenu).Close();
+            this.CenterToScreen();
+            this.Show();
+        }
+
         private void pnlRight_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -81,7 +100,6 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
                 this.Close();
             }
         }
-
 
         private void btnLogin_Click(object sender, EventArgs e)
         {

@@ -3,7 +3,7 @@ using System.Data;
 using System.Drawing;
 using WinFormsAppStoreManagement.BLL;
 
-namespace WinFormsAppStoreManagement.Database
+namespace WinFormsAppStoreManagement.DAL
 {
     public class Category
     {

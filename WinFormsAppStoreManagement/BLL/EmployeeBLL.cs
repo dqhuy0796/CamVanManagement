@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.DAL;
 
-namespace WinFormsAppStoreManagement.Controller
+namespace WinFormsAppStoreManagement.BLL
 {
     public class EmployeeBLL
     {

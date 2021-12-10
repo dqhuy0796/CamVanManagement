@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.DAL;
 
-namespace WinFormsAppStoreManagement.Controller
+namespace WinFormsAppStoreManagement.BLL
 {
     class OrderDetailBLL
     {
@@ -18,17 +18,16 @@ namespace WinFormsAppStoreManagement.Controller
         public DataTable LoadOrderDetailList(string orderId)
         {
             string query = "EXECUTE USP_ShowOrderDetail @OrderId ";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { orderId });
-            return data;
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { orderId }) as DataTable;
         }
         public int AddOrderDetailToDatabase(OrderDetail detail, string orderId)
         {
             string query = "INSERT INTO dbo.OrderDetail ( OrderId , ProductId , ProductQuantity ) VALUES ( @OrderId , @ProductId , @ProductQuantity )";
             return DataProvider.Instance.ExecuteNonQuery(query, new object[] { orderId, detail.ProductId, detail.ProductQuantity });
         }
-        public int DeleteOrderDetailFromDatabase(string orderId)
+        public int RemoveOrderDetailFromDatabase(string orderId)
         {
-            string query = "DELETE FROM dbo.OrderDetail WHERE OrderId = @OrderId";
+            string query = "DELETE FROM dbo.OrderDetail WHERE OrderId = @OrderId ";
             return DataProvider.Instance.ExecuteNonQuery(query, new object[] { orderId });
         }
     }

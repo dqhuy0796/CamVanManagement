@@ -167,10 +167,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlRemoveButton.BackColor = System.Drawing.Color.Transparent;
             this.pnlRemoveButton.Controls.Add(this.btnRemove);
             this.pnlRemoveButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlRemoveButton.Location = new System.Drawing.Point(258, 20);
+            this.pnlRemoveButton.Location = new System.Drawing.Point(228, 20);
             this.pnlRemoveButton.Name = "pnlRemoveButton";
             this.pnlRemoveButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pnlRemoveButton.Size = new System.Drawing.Size(120, 32);
+            this.pnlRemoveButton.Size = new System.Drawing.Size(130, 32);
             this.pnlRemoveButton.TabIndex = 16;
             this.pnlRemoveButton.Visible = false;
             // 
@@ -178,7 +178,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             // 
             this.btnRemove.BackColor = System.Drawing.Color.Transparent;
             this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemove.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnRemove.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRemove.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnRemove.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
             this.btnRemove.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
@@ -187,13 +187,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnRemove.Location = new System.Drawing.Point(20, 0);
             this.btnRemove.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Radius = 16;
+            this.btnRemove.Radius = 30;
             this.btnRemove.RectColor = System.Drawing.Color.White;
             this.btnRemove.RectDisableColor = System.Drawing.Color.White;
             this.btnRemove.RectHoverColor = System.Drawing.Color.White;
             this.btnRemove.RectPressColor = System.Drawing.Color.White;
             this.btnRemove.RectSelectedColor = System.Drawing.Color.White;
-            this.btnRemove.Size = new System.Drawing.Size(100, 32);
+            this.btnRemove.Size = new System.Drawing.Size(110, 32);
             this.btnRemove.Style = Sunny.UI.UIStyle.Custom;
             this.btnRemove.StyleCustomMode = true;
             this.btnRemove.TabIndex = 15;
@@ -205,10 +205,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlModifyButton.BackColor = System.Drawing.Color.Transparent;
             this.pnlModifyButton.Controls.Add(this.btnModify);
             this.pnlModifyButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlModifyButton.Location = new System.Drawing.Point(378, 20);
+            this.pnlModifyButton.Location = new System.Drawing.Point(358, 20);
             this.pnlModifyButton.Name = "pnlModifyButton";
             this.pnlModifyButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pnlModifyButton.Size = new System.Drawing.Size(120, 32);
+            this.pnlModifyButton.Size = new System.Drawing.Size(130, 32);
             this.pnlModifyButton.TabIndex = 15;
             this.pnlModifyButton.Visible = false;
             // 
@@ -225,13 +225,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnModify.Location = new System.Drawing.Point(20, 0);
             this.btnModify.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Radius = 16;
+            this.btnModify.Radius = 30;
             this.btnModify.RectColor = System.Drawing.Color.White;
             this.btnModify.RectDisableColor = System.Drawing.Color.White;
             this.btnModify.RectHoverColor = System.Drawing.Color.White;
             this.btnModify.RectPressColor = System.Drawing.Color.White;
             this.btnModify.RectSelectedColor = System.Drawing.Color.White;
-            this.btnModify.Size = new System.Drawing.Size(100, 32);
+            this.btnModify.Size = new System.Drawing.Size(110, 32);
             this.btnModify.Style = Sunny.UI.UIStyle.Custom;
             this.btnModify.StyleCustomMode = true;
             this.btnModify.TabIndex = 1;
@@ -251,13 +251,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnCancel.Location = new System.Drawing.Point(20, 20);
             this.btnCancel.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Radius = 16;
+            this.btnCancel.Radius = 30;
             this.btnCancel.RectColor = System.Drawing.Color.White;
             this.btnCancel.RectDisableColor = System.Drawing.Color.White;
             this.btnCancel.RectHoverColor = System.Drawing.Color.White;
             this.btnCancel.RectPressColor = System.Drawing.Color.White;
             this.btnCancel.RectSelectedColor = System.Drawing.Color.White;
-            this.btnCancel.Size = new System.Drawing.Size(100, 32);
+            this.btnCancel.Size = new System.Drawing.Size(110, 32);
             this.btnCancel.Style = Sunny.UI.UIStyle.Custom;
             this.btnCancel.StyleCustomMode = true;
             this.btnCancel.TabIndex = 14;
@@ -269,10 +269,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlSaveAndQuitButton.BackColor = System.Drawing.Color.Transparent;
             this.pnlSaveAndQuitButton.Controls.Add(this.btnSaveAndQuit);
             this.pnlSaveAndQuitButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlSaveAndQuitButton.Location = new System.Drawing.Point(498, 20);
+            this.pnlSaveAndQuitButton.Location = new System.Drawing.Point(488, 20);
             this.pnlSaveAndQuitButton.Name = "pnlSaveAndQuitButton";
             this.pnlSaveAndQuitButton.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pnlSaveAndQuitButton.Size = new System.Drawing.Size(120, 32);
+            this.pnlSaveAndQuitButton.Size = new System.Drawing.Size(130, 32);
             this.pnlSaveAndQuitButton.TabIndex = 12;
             this.pnlSaveAndQuitButton.Visible = false;
             // 
@@ -289,13 +289,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnSaveAndQuit.Location = new System.Drawing.Point(20, 0);
             this.btnSaveAndQuit.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSaveAndQuit.Name = "btnSaveAndQuit";
-            this.btnSaveAndQuit.Radius = 16;
+            this.btnSaveAndQuit.Radius = 30;
             this.btnSaveAndQuit.RectColor = System.Drawing.Color.White;
             this.btnSaveAndQuit.RectDisableColor = System.Drawing.Color.White;
             this.btnSaveAndQuit.RectHoverColor = System.Drawing.Color.White;
             this.btnSaveAndQuit.RectPressColor = System.Drawing.Color.White;
             this.btnSaveAndQuit.RectSelectedColor = System.Drawing.Color.White;
-            this.btnSaveAndQuit.Size = new System.Drawing.Size(100, 32);
+            this.btnSaveAndQuit.Size = new System.Drawing.Size(110, 32);
             this.btnSaveAndQuit.Style = Sunny.UI.UIStyle.Custom;
             this.btnSaveAndQuit.StyleCustomMode = true;
             this.btnSaveAndQuit.TabIndex = 1;

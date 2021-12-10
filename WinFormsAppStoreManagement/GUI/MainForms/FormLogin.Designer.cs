@@ -349,11 +349,11 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             // 
             // btnQuit
             // 
-            this.btnQuit.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnQuit.BackColor = System.Drawing.Color.Transparent;
             this.btnQuit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuit.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnQuit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnQuit.Image = global::WinFormsAppStoreManagement.Properties.Resources.white_exit_32;
+            this.btnQuit.Image = global::WinFormsAppStoreManagement.Properties.Resources.black_exit_32;
             this.btnQuit.Location = new System.Drawing.Point(421, 0);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(28, 28);

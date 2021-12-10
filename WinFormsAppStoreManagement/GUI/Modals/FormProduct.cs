@@ -7,8 +7,8 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
-using WinFormsAppStoreManagement.Controller;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.BLL;
+using WinFormsAppStoreManagement.DAL;
 
 namespace WinFormsAppStoreManagement.UserInterface.Modals
 {
@@ -29,11 +29,6 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
         #endregion
 
         #region Constructors
-        public FormProduct()
-        {
-            InitializeComponent();
-            Customize(false);
-        }
         public FormProduct(bool theme)
         {
             InitializeComponent();
@@ -61,12 +56,16 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.FormBorderStyle = FormBorderStyle.None;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
-            btnCancel.TextAlign = ContentAlignment.BottomCenter;
-            btnCancel.Padding = new Padding(0, 0, 0, 5);
-            btnSaveAndQuit.TextAlign = ContentAlignment.BottomCenter;
-            btnSaveAndQuit.Padding = new Padding(0, 0, 0, 5);
             btnUploadPicture.TextAlign = ContentAlignment.BottomCenter;
             btnUploadPicture.Padding = new Padding(0, 0, 0, 5);
+            btnCancel.TextAlign = ContentAlignment.BottomCenter;
+            btnCancel.Padding = new Padding(0, 0, 0, 5);
+            btnModify.TextAlign = ContentAlignment.BottomCenter;
+            btnModify.Padding = new Padding(0, 0, 0, 5);
+            btnRemove.TextAlign = ContentAlignment.BottomCenter;
+            btnRemove.Padding = new Padding(0, 0, 0, 5);
+            btnSaveAndQuit.TextAlign = ContentAlignment.BottomCenter;
+            btnSaveAndQuit.Padding = new Padding(0, 0, 0, 5);
 
             if (darkmode == true)
             {

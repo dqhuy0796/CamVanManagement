@@ -11,23 +11,26 @@ namespace WinFormsAppStoreManagement.DAL
     {
         string username;
         string password;
-        int typeAccount;
+        string typeAccount;
+        string displayName;
         string employeeId;
         Image avatar;
 
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
-        public int TypeAccount { get => typeAccount; set => typeAccount = value; }
+        public string TypeAccount { get => typeAccount; set => typeAccount = value; }
+        public string DisplayName { get => displayName; set => displayName = value; }
         public string EmployeeId { get => employeeId; set => employeeId = value; }
         public Image Avatar { get => avatar; set => avatar = value; }
 
         public Account() { }
 
-        public Account(string user, string pass, int type, string id, Image avt)
+        public Account(string user, string pass, string type, string name, string id, Image avt)
         {
             this.Username = user;
             this.Password = pass;
             this.TypeAccount = type;
+            this.DisplayName = name;
             this.EmployeeId = id;
             this.Avatar = avt;
         }
@@ -35,10 +38,10 @@ namespace WinFormsAppStoreManagement.DAL
         {
             this.Username = row["Username"].ToString();
             this.Password = row["Password"].ToString();
-            this.TypeAccount = Convert.ToInt32(row["TypeAccount"]);
+            this.TypeAccount = row["TypeAccount"].ToString();
+            this.DisplayName = row["DisplayName"].ToString();
             this.EmployeeId = row["EmployeeId"].ToString();
-            //this.Avatar = ImageProcessing.ConvertByteArrayToImage((byte[])row["Avartar"]);
-            this.Avatar = Properties.Resources.squid_game_avatar;
+            this.Avatar = ImageProcessing.ConvertByteArrayToImage((byte[])row["Avatar"]);
         }
     }
 }

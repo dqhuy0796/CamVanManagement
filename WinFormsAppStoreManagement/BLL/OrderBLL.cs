@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Text;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.DAL;
 
-namespace WinFormsAppStoreManagement.Controller
+namespace WinFormsAppStoreManagement.BLL
 {
     public class OrderBLL
     {
@@ -38,17 +37,25 @@ namespace WinFormsAppStoreManagement.Controller
             }
             return statuses;
         }
-        public List<Order> LoadOrderList()
+        public DataTable LoadOrderList()
         {
-            List<Order> orders = new List<Order>();
-            string query = "SELECT * FROM VW_ShowOrderList";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow item in data.Rows)
+            string query = "SELECT * FROM VW_ShowOrderList ORDER BY OrderId DESC";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public bool IsExistOrder(string orderId)
+        {
+            string query = "SELECT COUNT(*) FROM VW_ShowOrderList WHERE OrderId = @OrderId";
+            if (Convert.ToInt32(DataProvider.Instance.ExecuteScalar(query, new object[] { orderId })) > 0)
             {
-                Order order = new Order(item);
-                orders.Add(order);
+                return true;
             }
-            return orders;
+            return false;
+        }
+        public Order GetOrderByOrderId(string orderId)
+        {
+            string query = "SELECT * FROM VW_ShowOrderList WHERE OrderId = @OrderId ";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { orderId });
+            return new Order(data.Rows[0]);
         }
         public string GetLastestOrderFromDatabase()
         {
@@ -91,7 +98,7 @@ namespace WinFormsAppStoreManagement.Controller
         }
         public int RemoveOrderFromDatabase(string orderId)
         {
-            OrderDetailBLL.Instance.DeleteOrderDetailFromDatabase(orderId);
+            OrderDetailBLL.Instance.RemoveOrderDetailFromDatabase(orderId);
             string queryDeleteOrder = "DELETE FROM dbo.Orders WHERE OrderId = @OderId ";
             return DataProvider.Instance.ExecuteNonQuery(queryDeleteOrder, new object[] { orderId });
         }

@@ -67,6 +67,16 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.pnlContainer = new Sunny.UI.UIPanel();
             this.pnlLeft = new Sunny.UI.UIPanel();
             this.dgvCustomer = new Sunny.UI.UIDataGridView();
+            this.colCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerCIC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerPoint = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlRight = new Sunny.UI.UIPanel();
             this.pnlTool = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -85,16 +95,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.uiAvatar1 = new Sunny.UI.UIAvatar();
             this.cboFilterByField = new Sunny.UI.UIComboBox();
             this.btnToggleTool = new System.Windows.Forms.Button();
-            this.colCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerCIC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerTel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerBirth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerPoint = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHeader.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -153,7 +153,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.panel6.Location = new System.Drawing.Point(634, 14);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.panel6.Size = new System.Drawing.Size(100, 32);
+            this.panel6.Size = new System.Drawing.Size(110, 32);
             this.panel6.TabIndex = 6;
             // 
             // btnResetFilter
@@ -170,12 +170,12 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnResetFilter.Location = new System.Drawing.Point(0, 0);
             this.btnResetFilter.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnResetFilter.Name = "btnResetFilter";
-            this.btnResetFilter.Radius = 16;
+            this.btnResetFilter.Radius = 30;
             this.btnResetFilter.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.btnResetFilter.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnResetFilter.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnResetFilter.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
-            this.btnResetFilter.Size = new System.Drawing.Size(85, 32);
+            this.btnResetFilter.Size = new System.Drawing.Size(95, 32);
             this.btnResetFilter.Style = Sunny.UI.UIStyle.Colorful;
             this.btnResetFilter.StyleCustomMode = true;
             this.btnResetFilter.TabIndex = 1;
@@ -364,7 +364,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnRemove.Location = new System.Drawing.Point(10, 0);
             this.btnRemove.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Radius = 16;
+            this.btnRemove.Radius = 30;
             this.btnRemove.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnRemove.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
             this.btnRemove.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
@@ -397,7 +397,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnModify.Location = new System.Drawing.Point(10, 0);
             this.btnModify.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Radius = 16;
+            this.btnModify.Radius = 30;
             this.btnModify.Size = new System.Drawing.Size(160, 32);
             this.btnModify.StyleCustomMode = true;
             this.btnModify.TabIndex = 1;
@@ -428,7 +428,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnAdd.Location = new System.Drawing.Point(10, 0);
             this.btnAdd.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Radius = 16;
+            this.btnAdd.Radius = 30;
             this.btnAdd.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.btnAdd.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnAdd.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
@@ -464,7 +464,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnBackToMainMenu.Location = new System.Drawing.Point(10, 0);
             this.btnBackToMainMenu.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
-            this.btnBackToMainMenu.Radius = 16;
+            this.btnBackToMainMenu.Radius = 30;
             this.btnBackToMainMenu.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnBackToMainMenu.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
             this.btnBackToMainMenu.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
@@ -572,6 +572,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvCustomer.RowHeadersVisible = false;
             this.dgvCustomer.RowHeight = 25;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
             this.dgvCustomer.RowsDefaultCellStyle = dataGridViewCellStyle15;
@@ -584,6 +585,136 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.dgvCustomer.StyleCustomMode = true;
             this.dgvCustomer.TabIndex = 1;
             this.dgvCustomer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellDoubleClick);
+            // 
+            // colCustomerId
+            // 
+            this.colCustomerId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerId.DataPropertyName = "CustomerId";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colCustomerId.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colCustomerId.HeaderText = "Mã khách hàng";
+            this.colCustomerId.MinimumWidth = 120;
+            this.colCustomerId.Name = "colCustomerId";
+            this.colCustomerId.ReadOnly = true;
+            this.colCustomerId.ToolTipText = "Mã khách hàng tự động";
+            this.colCustomerId.Width = 120;
+            // 
+            // colCustomerName
+            // 
+            this.colCustomerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerName.DataPropertyName = "CustomerName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCustomerName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colCustomerName.HeaderText = "Khách hàng";
+            this.colCustomerName.MinimumWidth = 160;
+            this.colCustomerName.Name = "colCustomerName";
+            this.colCustomerName.ReadOnly = true;
+            this.colCustomerName.ToolTipText = "Tên khách hàng nè bạn nhỏ";
+            this.colCustomerName.Width = 160;
+            // 
+            // colCustomerGender
+            // 
+            this.colCustomerGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerGender.DataPropertyName = "GenderName";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCustomerGender.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colCustomerGender.HeaderText = "G.tính";
+            this.colCustomerGender.MinimumWidth = 60;
+            this.colCustomerGender.Name = "colCustomerGender";
+            this.colCustomerGender.ReadOnly = true;
+            this.colCustomerGender.ToolTipText = "Giới tính";
+            this.colCustomerGender.Width = 60;
+            // 
+            // colCustomerCIC
+            // 
+            this.colCustomerCIC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerCIC.DataPropertyName = "CustomerCIC";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.NullValue = "không có";
+            this.colCustomerCIC.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colCustomerCIC.HeaderText = "CCCD";
+            this.colCustomerCIC.MinimumWidth = 120;
+            this.colCustomerCIC.Name = "colCustomerCIC";
+            this.colCustomerCIC.ReadOnly = true;
+            this.colCustomerCIC.ToolTipText = "Căn cước công dân";
+            this.colCustomerCIC.Width = 120;
+            // 
+            // colCustomerTel
+            // 
+            this.colCustomerTel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerTel.DataPropertyName = "CustomerTel";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colCustomerTel.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colCustomerTel.HeaderText = "Số điện thoại";
+            this.colCustomerTel.MinimumWidth = 120;
+            this.colCustomerTel.Name = "colCustomerTel";
+            this.colCustomerTel.ReadOnly = true;
+            this.colCustomerTel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colCustomerTel.Width = 120;
+            // 
+            // colCustomerBirth
+            // 
+            this.colCustomerBirth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerBirth.DataPropertyName = "CustomerBirth";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colCustomerBirth.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colCustomerBirth.HeaderText = "Ngày sinh";
+            this.colCustomerBirth.MinimumWidth = 120;
+            this.colCustomerBirth.Name = "colCustomerBirth";
+            this.colCustomerBirth.ReadOnly = true;
+            this.colCustomerBirth.Width = 120;
+            // 
+            // colCustomerAddress
+            // 
+            this.colCustomerAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerAddress.DataPropertyName = "CustomerAddress";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCustomerAddress.DefaultCellStyle = dataGridViewCellStyle9;
+            this.colCustomerAddress.HeaderText = "Địa chỉ";
+            this.colCustomerAddress.MinimumWidth = 160;
+            this.colCustomerAddress.Name = "colCustomerAddress";
+            this.colCustomerAddress.ReadOnly = true;
+            this.colCustomerAddress.Width = 160;
+            // 
+            // colCustomerLevel
+            // 
+            this.colCustomerLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerLevel.DataPropertyName = "CustomerLevel";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCustomerLevel.DefaultCellStyle = dataGridViewCellStyle10;
+            this.colCustomerLevel.HeaderText = "Cấp";
+            this.colCustomerLevel.MinimumWidth = 60;
+            this.colCustomerLevel.Name = "colCustomerLevel";
+            this.colCustomerLevel.ReadOnly = true;
+            this.colCustomerLevel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colCustomerLevel.ToolTipText = "Cấp bậc hội viên khi đạt đủ mức tiêu dùng";
+            this.colCustomerLevel.Width = 60;
+            // 
+            // colCustomerPoint
+            // 
+            this.colCustomerPoint.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerPoint.DataPropertyName = "CustomerPoint";
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colCustomerPoint.DefaultCellStyle = dataGridViewCellStyle11;
+            this.colCustomerPoint.HeaderText = "Điểm tích luỹ";
+            this.colCustomerPoint.MinimumWidth = 120;
+            this.colCustomerPoint.Name = "colCustomerPoint";
+            this.colCustomerPoint.ReadOnly = true;
+            this.colCustomerPoint.ToolTipText = "Điểm được tích luỹ khi tiêu dùng 1000vnđ = 1 điểm";
+            this.colCustomerPoint.Width = 120;
+            // 
+            // colCustomerDescription
+            // 
+            this.colCustomerDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCustomerDescription.DataPropertyName = "CustomerDescription";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCustomerDescription.DefaultCellStyle = dataGridViewCellStyle12;
+            this.colCustomerDescription.HeaderText = "Ghi chú";
+            this.colCustomerDescription.MinimumWidth = 160;
+            this.colCustomerDescription.Name = "colCustomerDescription";
+            this.colCustomerDescription.ReadOnly = true;
+            this.colCustomerDescription.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCustomerDescription.ToolTipText = "Ghi chú ú hú hú";
             // 
             // pnlRight
             // 
@@ -659,10 +790,10 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.rdoLgbt.BackColor = System.Drawing.Color.Transparent;
             this.rdoLgbt.Location = new System.Drawing.Point(331, 48);
             this.rdoLgbt.Name = "rdoLgbt";
-            this.rdoLgbt.Size = new System.Drawing.Size(68, 23);
+            this.rdoLgbt.Size = new System.Drawing.Size(59, 23);
             this.rdoLgbt.TabIndex = 1;
             this.rdoLgbt.TabStop = true;
-            this.rdoLgbt.Text = "LGBT+";
+            this.rdoLgbt.Text = "Khác";
             this.rdoLgbt.UseVisualStyleBackColor = false;
             // 
             // rdoFemale
@@ -812,7 +943,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.uiAvatar1.Location = new System.Drawing.Point(414, 10);
             this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar1.Name = "uiAvatar1";
-            this.uiAvatar1.Shape = Sunny.UI.UIShape.Square;
             this.uiAvatar1.Size = new System.Drawing.Size(32, 30);
             this.uiAvatar1.Style = Sunny.UI.UIStyle.Custom;
             this.uiAvatar1.StyleCustomMode = true;
@@ -858,125 +988,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnToggleTool.TabIndex = 0;
             this.btnToggleTool.UseVisualStyleBackColor = false;
             this.btnToggleTool.Click += new System.EventHandler(this.btnToggleTool_Click);
-            // 
-            // colCustomerId
-            // 
-            this.colCustomerId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerId.DataPropertyName = "CustomerId";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colCustomerId.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colCustomerId.HeaderText = "Mã khách hàng";
-            this.colCustomerId.MinimumWidth = 120;
-            this.colCustomerId.Name = "colCustomerId";
-            this.colCustomerId.ReadOnly = true;
-            this.colCustomerId.ToolTipText = "Mã khách hàng tự động";
-            // 
-            // colCustomerName
-            // 
-            this.colCustomerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerName.DataPropertyName = "CustomerName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colCustomerName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colCustomerName.HeaderText = "Khách hàng";
-            this.colCustomerName.MinimumWidth = 160;
-            this.colCustomerName.Name = "colCustomerName";
-            this.colCustomerName.ReadOnly = true;
-            this.colCustomerName.ToolTipText = "Tên khách hàng nè bạn nhỏ";
-            // 
-            // colCustomerGender
-            // 
-            this.colCustomerGender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colCustomerGender.DataPropertyName = "GenderName";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colCustomerGender.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colCustomerGender.HeaderText = "Giới tính";
-            this.colCustomerGender.MinimumWidth = 100;
-            this.colCustomerGender.Name = "colCustomerGender";
-            this.colCustomerGender.ReadOnly = true;
-            // 
-            // colCustomerCIC
-            // 
-            this.colCustomerCIC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerCIC.DataPropertyName = "CustomerCIC";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colCustomerCIC.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colCustomerCIC.HeaderText = "CCCD";
-            this.colCustomerCIC.MinimumWidth = 120;
-            this.colCustomerCIC.Name = "colCustomerCIC";
-            this.colCustomerCIC.ReadOnly = true;
-            this.colCustomerCIC.ToolTipText = "Căn cước công dân";
-            // 
-            // colCustomerTel
-            // 
-            this.colCustomerTel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerTel.DataPropertyName = "CustomerTel";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colCustomerTel.DefaultCellStyle = dataGridViewCellStyle7;
-            this.colCustomerTel.HeaderText = "Số điện thoại";
-            this.colCustomerTel.MinimumWidth = 120;
-            this.colCustomerTel.Name = "colCustomerTel";
-            this.colCustomerTel.ReadOnly = true;
-            this.colCustomerTel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // colCustomerBirth
-            // 
-            this.colCustomerBirth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerBirth.DataPropertyName = "CustomerBirth";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colCustomerBirth.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colCustomerBirth.HeaderText = "Ngày sinh";
-            this.colCustomerBirth.MinimumWidth = 120;
-            this.colCustomerBirth.Name = "colCustomerBirth";
-            this.colCustomerBirth.ReadOnly = true;
-            // 
-            // colCustomerAddress
-            // 
-            this.colCustomerAddress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerAddress.DataPropertyName = "CustomerAddress";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colCustomerAddress.DefaultCellStyle = dataGridViewCellStyle9;
-            this.colCustomerAddress.HeaderText = "Địa chỉ";
-            this.colCustomerAddress.MinimumWidth = 160;
-            this.colCustomerAddress.Name = "colCustomerAddress";
-            this.colCustomerAddress.ReadOnly = true;
-            // 
-            // colCustomerLevel
-            // 
-            this.colCustomerLevel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerLevel.DataPropertyName = "CustomerLevel";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colCustomerLevel.DefaultCellStyle = dataGridViewCellStyle10;
-            this.colCustomerLevel.HeaderText = "Cấp hội viên";
-            this.colCustomerLevel.MinimumWidth = 100;
-            this.colCustomerLevel.Name = "colCustomerLevel";
-            this.colCustomerLevel.ReadOnly = true;
-            this.colCustomerLevel.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colCustomerLevel.ToolTipText = "Cấp bậc hội viên khi đạt đủ mức tiêu dùng";
-            // 
-            // colCustomerPoint
-            // 
-            this.colCustomerPoint.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerPoint.DataPropertyName = "CustomerPoint";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colCustomerPoint.DefaultCellStyle = dataGridViewCellStyle11;
-            this.colCustomerPoint.HeaderText = "Điểm tích luỹ";
-            this.colCustomerPoint.MinimumWidth = 120;
-            this.colCustomerPoint.Name = "colCustomerPoint";
-            this.colCustomerPoint.ReadOnly = true;
-            this.colCustomerPoint.ToolTipText = "Điểm được tích luỹ khi tiêu dùng 1000vnđ = 1 điểm";
-            // 
-            // colCustomerDescription
-            // 
-            this.colCustomerDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerDescription.DataPropertyName = "CustomerDescription";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colCustomerDescription.DefaultCellStyle = dataGridViewCellStyle12;
-            this.colCustomerDescription.HeaderText = "Ghi chú";
-            this.colCustomerDescription.MinimumWidth = 160;
-            this.colCustomerDescription.Name = "colCustomerDescription";
-            this.colCustomerDescription.ReadOnly = true;
-            this.colCustomerDescription.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCustomerDescription.ToolTipText = "Ghi chú ú hú hú";
             // 
             // FormCustomerManagement
             // 

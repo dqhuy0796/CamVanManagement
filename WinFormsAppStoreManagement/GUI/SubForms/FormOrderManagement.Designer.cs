@@ -34,7 +34,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrderManagement));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,9 +42,18 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrderManagement));
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.pnlLeft = new Sunny.UI.UIPanel();
             this.dgvOrder = new Sunny.UI.UIDataGridView();
+            this.colOrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOrderTimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmployeeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmployeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOrderStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOrderDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlRight = new Sunny.UI.UIPanel();
             this.pnlTool = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -82,14 +90,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.cboFilterByTime = new Sunny.UI.UIComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lblOrderBy = new System.Windows.Forms.Label();
-            this.colOrderId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colOrderTimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmployeeId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmployeeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colOrderStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colOrderDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlContainer.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrder)).BeginInit();
@@ -201,6 +201,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvOrder.RowHeadersVisible = false;
             this.dgvOrder.RowHeight = 25;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
             this.dgvOrder.RowsDefaultCellStyle = dataGridViewCellStyle13;
@@ -213,6 +214,119 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.dgvOrder.StyleCustomMode = true;
             this.dgvOrder.TabIndex = 1;
             this.dgvOrder.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrder_CellDoubleClick);
+            // 
+            // colOrderId
+            // 
+            this.colOrderId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colOrderId.DataPropertyName = "OrderId";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colOrderId.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colOrderId.HeaderText = "Mã đơn hàng";
+            this.colOrderId.MinimumWidth = 120;
+            this.colOrderId.Name = "colOrderId";
+            this.colOrderId.ReadOnly = true;
+            this.colOrderId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colOrderId.ToolTipText = "Mã đơn hàng được tạo tự động";
+            this.colOrderId.Width = 120;
+            // 
+            // colOrderTimeStamp
+            // 
+            this.colOrderTimeStamp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colOrderTimeStamp.DataPropertyName = "OrderTimeStamp";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colOrderTimeStamp.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colOrderTimeStamp.FillWeight = 20F;
+            this.colOrderTimeStamp.HeaderText = "Thời gian";
+            this.colOrderTimeStamp.MinimumWidth = 160;
+            this.colOrderTimeStamp.Name = "colOrderTimeStamp";
+            this.colOrderTimeStamp.ReadOnly = true;
+            this.colOrderTimeStamp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colOrderTimeStamp.ToolTipText = "Thời gian tạo đơn hàng và lưu vào hệ thống";
+            this.colOrderTimeStamp.Width = 160;
+            // 
+            // colCustomerId
+            // 
+            this.colCustomerId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerId.DataPropertyName = "CustomerId";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colCustomerId.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colCustomerId.HeaderText = "Mã khách hàng";
+            this.colCustomerId.MinimumWidth = 120;
+            this.colCustomerId.Name = "colCustomerId";
+            this.colCustomerId.ReadOnly = true;
+            this.colCustomerId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCustomerId.Width = 120;
+            // 
+            // colCustomerName
+            // 
+            this.colCustomerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCustomerName.DataPropertyName = "CustomerName";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCustomerName.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colCustomerName.FillWeight = 20F;
+            this.colCustomerName.HeaderText = "Khách hàng";
+            this.colCustomerName.MinimumWidth = 150;
+            this.colCustomerName.Name = "colCustomerName";
+            this.colCustomerName.ReadOnly = true;
+            this.colCustomerName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCustomerName.ToolTipText = "Thông tin của khách hàng";
+            this.colCustomerName.Width = 150;
+            // 
+            // colEmployeeId
+            // 
+            this.colEmployeeId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colEmployeeId.DataPropertyName = "EmployeeId";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colEmployeeId.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colEmployeeId.HeaderText = "Mã nhân viên";
+            this.colEmployeeId.MinimumWidth = 120;
+            this.colEmployeeId.Name = "colEmployeeId";
+            this.colEmployeeId.ReadOnly = true;
+            this.colEmployeeId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colEmployeeId.Width = 120;
+            // 
+            // colEmployeeName
+            // 
+            this.colEmployeeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colEmployeeName.DataPropertyName = "EmployeeName";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colEmployeeName.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colEmployeeName.FillWeight = 20F;
+            this.colEmployeeName.HeaderText = "Nhân viên";
+            this.colEmployeeName.MinimumWidth = 150;
+            this.colEmployeeName.Name = "colEmployeeName";
+            this.colEmployeeName.ReadOnly = true;
+            this.colEmployeeName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colEmployeeName.ToolTipText = "Tên nhân viên tạo đơn";
+            this.colEmployeeName.Width = 150;
+            // 
+            // colOrderStatus
+            // 
+            this.colOrderStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colOrderStatus.DataPropertyName = "StatusName";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colOrderStatus.DefaultCellStyle = dataGridViewCellStyle9;
+            this.colOrderStatus.FillWeight = 20F;
+            this.colOrderStatus.HeaderText = "Trạng thái";
+            this.colOrderStatus.MinimumWidth = 120;
+            this.colOrderStatus.Name = "colOrderStatus";
+            this.colOrderStatus.ReadOnly = true;
+            this.colOrderStatus.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colOrderStatus.ToolTipText = "Trạng thái xử lý đơn hàng trong hệ thống";
+            this.colOrderStatus.Width = 120;
+            // 
+            // colOrderDescription
+            // 
+            this.colOrderDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colOrderDescription.DataPropertyName = "OrderDescription";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colOrderDescription.DefaultCellStyle = dataGridViewCellStyle10;
+            this.colOrderDescription.HeaderText = "Ghi chú";
+            this.colOrderDescription.MinimumWidth = 160;
+            this.colOrderDescription.Name = "colOrderDescription";
+            this.colOrderDescription.ReadOnly = true;
+            this.colOrderDescription.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colOrderDescription.ToolTipText = "Thích ghi gì thì ghi";
             // 
             // pnlRight
             // 
@@ -387,7 +501,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.uiAvatar1.Location = new System.Drawing.Point(414, 10);
             this.uiAvatar1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiAvatar1.Name = "uiAvatar1";
-            this.uiAvatar1.Shape = Sunny.UI.UIShape.Square;
             this.uiAvatar1.Size = new System.Drawing.Size(32, 32);
             this.uiAvatar1.Style = Sunny.UI.UIStyle.Custom;
             this.uiAvatar1.StyleCustomMode = true;
@@ -477,7 +590,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnSearchById.Location = new System.Drawing.Point(414, 10);
             this.btnSearchById.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSearchById.Name = "btnSearchById";
-            this.btnSearchById.Shape = Sunny.UI.UIShape.Square;
             this.btnSearchById.Size = new System.Drawing.Size(32, 32);
             this.btnSearchById.Style = Sunny.UI.UIStyle.Custom;
             this.btnSearchById.StyleCustomMode = true;
@@ -576,7 +688,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnRemove.Location = new System.Drawing.Point(10, 0);
             this.btnRemove.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Radius = 16;
+            this.btnRemove.Radius = 30;
             this.btnRemove.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnRemove.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
             this.btnRemove.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
@@ -608,7 +720,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnModify.Location = new System.Drawing.Point(10, 0);
             this.btnModify.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Radius = 16;
+            this.btnModify.Radius = 30;
             this.btnModify.Size = new System.Drawing.Size(160, 32);
             this.btnModify.StyleCustomMode = true;
             this.btnModify.TabIndex = 1;
@@ -638,7 +750,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnCreate.Location = new System.Drawing.Point(10, 0);
             this.btnCreate.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Radius = 16;
+            this.btnCreate.Radius = 30;
             this.btnCreate.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.btnCreate.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnCreate.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
@@ -674,7 +786,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnBackToMainMenu.Location = new System.Drawing.Point(10, 0);
             this.btnBackToMainMenu.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
-            this.btnBackToMainMenu.Radius = 16;
+            this.btnBackToMainMenu.Radius = 30;
             this.btnBackToMainMenu.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnBackToMainMenu.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
             this.btnBackToMainMenu.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
@@ -718,7 +830,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.panel6.Location = new System.Drawing.Point(464, 14);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.panel6.Size = new System.Drawing.Size(100, 32);
+            this.panel6.Size = new System.Drawing.Size(110, 32);
             this.panel6.TabIndex = 17;
             // 
             // btnResetFilter
@@ -735,12 +847,12 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnResetFilter.Location = new System.Drawing.Point(0, 0);
             this.btnResetFilter.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnResetFilter.Name = "btnResetFilter";
-            this.btnResetFilter.Radius = 16;
+            this.btnResetFilter.Radius = 30;
             this.btnResetFilter.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.btnResetFilter.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnResetFilter.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnResetFilter.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
-            this.btnResetFilter.Size = new System.Drawing.Size(85, 32);
+            this.btnResetFilter.Size = new System.Drawing.Size(95, 32);
             this.btnResetFilter.Style = Sunny.UI.UIStyle.Colorful;
             this.btnResetFilter.StyleCustomMode = true;
             this.btnResetFilter.TabIndex = 1;
@@ -843,115 +955,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.lblOrderBy.TabIndex = 0;
             this.lblOrderBy.Text = "Sắp xếp theo";
             this.lblOrderBy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // colOrderId
-            // 
-            this.colOrderId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colOrderId.DataPropertyName = "OrderId";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colOrderId.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colOrderId.HeaderText = "Mã đơn hàng";
-            this.colOrderId.MinimumWidth = 120;
-            this.colOrderId.Name = "colOrderId";
-            this.colOrderId.ReadOnly = true;
-            this.colOrderId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colOrderId.ToolTipText = "Mã đơn hàng được tạo tự động";
-            this.colOrderId.Width = 120;
-            // 
-            // colOrderTimeStamp
-            // 
-            this.colOrderTimeStamp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colOrderTimeStamp.DataPropertyName = "OrderTimeStamp";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colOrderTimeStamp.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colOrderTimeStamp.FillWeight = 20F;
-            this.colOrderTimeStamp.HeaderText = "Thời gian";
-            this.colOrderTimeStamp.MinimumWidth = 160;
-            this.colOrderTimeStamp.Name = "colOrderTimeStamp";
-            this.colOrderTimeStamp.ReadOnly = true;
-            this.colOrderTimeStamp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colOrderTimeStamp.ToolTipText = "Thời gian tạo đơn hàng và lưu vào hệ thống";
-            // 
-            // colCustomerId
-            // 
-            this.colCustomerId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colCustomerId.DataPropertyName = "CustomerId";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colCustomerId.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colCustomerId.HeaderText = "Mã khách hàng";
-            this.colCustomerId.MinimumWidth = 120;
-            this.colCustomerId.Name = "colCustomerId";
-            this.colCustomerId.ReadOnly = true;
-            this.colCustomerId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCustomerId.Width = 120;
-            // 
-            // colCustomerName
-            // 
-            this.colCustomerName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCustomerName.DataPropertyName = "CustomerName";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colCustomerName.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colCustomerName.FillWeight = 20F;
-            this.colCustomerName.HeaderText = "Khách hàng";
-            this.colCustomerName.MinimumWidth = 150;
-            this.colCustomerName.Name = "colCustomerName";
-            this.colCustomerName.ReadOnly = true;
-            this.colCustomerName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCustomerName.ToolTipText = "Thông tin của khách hàng";
-            // 
-            // colEmployeeId
-            // 
-            this.colEmployeeId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colEmployeeId.DataPropertyName = "EmployeeId";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colEmployeeId.DefaultCellStyle = dataGridViewCellStyle7;
-            this.colEmployeeId.HeaderText = "Mã nhân viên";
-            this.colEmployeeId.MinimumWidth = 120;
-            this.colEmployeeId.Name = "colEmployeeId";
-            this.colEmployeeId.ReadOnly = true;
-            this.colEmployeeId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colEmployeeId.Width = 120;
-            // 
-            // colEmployeeName
-            // 
-            this.colEmployeeName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colEmployeeName.DataPropertyName = "EmployeeName";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colEmployeeName.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colEmployeeName.FillWeight = 20F;
-            this.colEmployeeName.HeaderText = "Nhân viên";
-            this.colEmployeeName.MinimumWidth = 150;
-            this.colEmployeeName.Name = "colEmployeeName";
-            this.colEmployeeName.ReadOnly = true;
-            this.colEmployeeName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colEmployeeName.ToolTipText = "Tên nhân viên tạo đơn";
-            // 
-            // colOrderStatus
-            // 
-            this.colOrderStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colOrderStatus.DataPropertyName = "StatusName";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colOrderStatus.DefaultCellStyle = dataGridViewCellStyle9;
-            this.colOrderStatus.FillWeight = 20F;
-            this.colOrderStatus.HeaderText = "Trạng thái";
-            this.colOrderStatus.MinimumWidth = 120;
-            this.colOrderStatus.Name = "colOrderStatus";
-            this.colOrderStatus.ReadOnly = true;
-            this.colOrderStatus.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colOrderStatus.ToolTipText = "Trạng thái xử lý đơn hàng trong hệ thống";
-            // 
-            // colOrderDescription
-            // 
-            this.colOrderDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colOrderDescription.DataPropertyName = "OrderDescription";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colOrderDescription.DefaultCellStyle = dataGridViewCellStyle10;
-            this.colOrderDescription.HeaderText = "Ghi chú";
-            this.colOrderDescription.MinimumWidth = 160;
-            this.colOrderDescription.Name = "colOrderDescription";
-            this.colOrderDescription.ReadOnly = true;
-            this.colOrderDescription.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colOrderDescription.ToolTipText = "Thích ghi gì thì ghi";
             // 
             // FormOrderManagement
             // 

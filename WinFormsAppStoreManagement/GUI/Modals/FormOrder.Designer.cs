@@ -205,7 +205,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnRemoveOrder.Location = new System.Drawing.Point(10, 0);
             this.btnRemoveOrder.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnRemoveOrder.Name = "btnRemoveOrder";
-            this.btnRemoveOrder.Radius = 16;
+            this.btnRemoveOrder.Radius = 30;
             this.btnRemoveOrder.RectColor = System.Drawing.Color.White;
             this.btnRemoveOrder.RectDisableColor = System.Drawing.Color.White;
             this.btnRemoveOrder.RectHoverColor = System.Drawing.Color.White;
@@ -243,7 +243,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnModifyOrder.Location = new System.Drawing.Point(10, 0);
             this.btnModifyOrder.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnModifyOrder.Name = "btnModifyOrder";
-            this.btnModifyOrder.Radius = 16;
+            this.btnModifyOrder.Radius = 30;
             this.btnModifyOrder.RectColor = System.Drawing.Color.White;
             this.btnModifyOrder.RectDisableColor = System.Drawing.Color.White;
             this.btnModifyOrder.RectHoverColor = System.Drawing.Color.White;
@@ -281,7 +281,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnSaveNewOrder.Location = new System.Drawing.Point(10, 0);
             this.btnSaveNewOrder.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSaveNewOrder.Name = "btnSaveNewOrder";
-            this.btnSaveNewOrder.Radius = 16;
+            this.btnSaveNewOrder.Radius = 30;
             this.btnSaveNewOrder.RectColor = System.Drawing.Color.White;
             this.btnSaveNewOrder.RectDisableColor = System.Drawing.Color.White;
             this.btnSaveNewOrder.RectHoverColor = System.Drawing.Color.White;
@@ -307,7 +307,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnCancel.Location = new System.Drawing.Point(20, 20);
             this.btnCancel.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Radius = 16;
+            this.btnCancel.Radius = 30;
             this.btnCancel.RectColor = System.Drawing.Color.White;
             this.btnCancel.RectDisableColor = System.Drawing.Color.White;
             this.btnCancel.RectHoverColor = System.Drawing.Color.White;
@@ -345,7 +345,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnExportBill.Location = new System.Drawing.Point(10, 0);
             this.btnExportBill.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnExportBill.Name = "btnExportBill";
-            this.btnExportBill.Radius = 16;
+            this.btnExportBill.Radius = 30;
             this.btnExportBill.RectColor = System.Drawing.Color.White;
             this.btnExportBill.RectDisableColor = System.Drawing.Color.White;
             this.btnExportBill.RectHoverColor = System.Drawing.Color.White;
@@ -422,7 +422,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.dgvOrderDetail.EnableHeadersVisualStyles = false;
             this.dgvOrderDetail.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dgvOrderDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.dgvOrderDetail.Location = new System.Drawing.Point(5, 151);
+            this.dgvOrderDetail.Location = new System.Drawing.Point(5, 130);
             this.dgvOrderDetail.Name = "dgvOrderDetail";
             this.dgvOrderDetail.ReadOnly = true;
             this.dgvOrderDetail.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -442,7 +442,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.dgvOrderDetail.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvOrderDetail.SelectedIndex = -1;
             this.dgvOrderDetail.ShowGridLine = true;
-            this.dgvOrderDetail.Size = new System.Drawing.Size(655, 293);
+            this.dgvOrderDetail.Size = new System.Drawing.Size(655, 314);
             this.dgvOrderDetail.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.dgvOrderDetail.Style = Sunny.UI.UIStyle.Colorful;
             this.dgvOrderDetail.StyleCustomMode = true;
@@ -648,7 +648,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnRemoveProduct.Location = new System.Drawing.Point(0, 0);
             this.btnRemoveProduct.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnRemoveProduct.Name = "btnRemoveProduct";
-            this.btnRemoveProduct.Radius = 10;
+            this.btnRemoveProduct.Radius = 28;
             this.btnRemoveProduct.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnRemoveProduct.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
             this.btnRemoveProduct.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
@@ -725,7 +725,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.tlpOrderInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpOrderInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tlpOrderInfo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpOrderInfo.Size = new System.Drawing.Size(655, 141);
+            this.tlpOrderInfo.Size = new System.Drawing.Size(655, 120);
             this.tlpOrderInfo.TabIndex = 0;
             // 
             // panel5
@@ -733,11 +733,11 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel5.Controls.Add(this.txtEmployeeName);
             this.panel5.Controls.Add(this.lblEmployeeName);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(327, 94);
+            this.panel5.Location = new System.Drawing.Point(327, 80);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(5, 10, 0, 10);
-            this.panel5.Size = new System.Drawing.Size(328, 47);
+            this.panel5.Padding = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.panel5.Size = new System.Drawing.Size(328, 40);
             this.panel5.TabIndex = 5;
             // 
             // txtEmployeeName
@@ -747,7 +747,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtEmployeeName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmployeeName.FillColor = System.Drawing.Color.White;
             this.txtEmployeeName.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEmployeeName.Location = new System.Drawing.Point(85, 10);
+            this.txtEmployeeName.Location = new System.Drawing.Point(85, 0);
             this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeeName.Maximum = 2147483647D;
             this.txtEmployeeName.Minimum = -2147483648D;
@@ -756,7 +756,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtEmployeeName.Radius = 10;
             this.txtEmployeeName.ReadOnly = true;
             this.txtEmployeeName.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtEmployeeName.Size = new System.Drawing.Size(243, 27);
+            this.txtEmployeeName.Size = new System.Drawing.Size(243, 30);
             this.txtEmployeeName.Style = Sunny.UI.UIStyle.Colorful;
             this.txtEmployeeName.StyleCustomMode = true;
             this.txtEmployeeName.TabIndex = 1;
@@ -766,10 +766,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             // lblEmployeeName
             // 
             this.lblEmployeeName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblEmployeeName.Location = new System.Drawing.Point(5, 10);
+            this.lblEmployeeName.Location = new System.Drawing.Point(5, 0);
             this.lblEmployeeName.Margin = new System.Windows.Forms.Padding(0);
             this.lblEmployeeName.Name = "lblEmployeeName";
-            this.lblEmployeeName.Size = new System.Drawing.Size(80, 27);
+            this.lblEmployeeName.Size = new System.Drawing.Size(80, 30);
             this.lblEmployeeName.TabIndex = 0;
             this.lblEmployeeName.Text = "Tên n.viên";
             this.lblEmployeeName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -779,11 +779,11 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel4.Controls.Add(this.txtCustomerName);
             this.panel4.Controls.Add(this.lblCustomerName);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 94);
+            this.panel4.Location = new System.Drawing.Point(0, 80);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(0, 10, 5, 10);
-            this.panel4.Size = new System.Drawing.Size(327, 47);
+            this.panel4.Padding = new System.Windows.Forms.Padding(0, 0, 5, 10);
+            this.panel4.Size = new System.Drawing.Size(327, 40);
             this.panel4.TabIndex = 4;
             // 
             // txtCustomerName
@@ -793,7 +793,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtCustomerName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCustomerName.FillColor = System.Drawing.Color.White;
             this.txtCustomerName.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCustomerName.Location = new System.Drawing.Point(80, 10);
+            this.txtCustomerName.Location = new System.Drawing.Point(80, 0);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustomerName.Maximum = 2147483647D;
             this.txtCustomerName.Minimum = -2147483648D;
@@ -801,7 +801,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Radius = 10;
             this.txtCustomerName.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtCustomerName.Size = new System.Drawing.Size(242, 27);
+            this.txtCustomerName.Size = new System.Drawing.Size(242, 30);
             this.txtCustomerName.Style = Sunny.UI.UIStyle.Colorful;
             this.txtCustomerName.StyleCustomMode = true;
             this.txtCustomerName.TabIndex = 1;
@@ -811,9 +811,9 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             // lblCustomerName
             // 
             this.lblCustomerName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblCustomerName.Location = new System.Drawing.Point(0, 10);
+            this.lblCustomerName.Location = new System.Drawing.Point(0, 0);
             this.lblCustomerName.Name = "lblCustomerName";
-            this.lblCustomerName.Size = new System.Drawing.Size(80, 27);
+            this.lblCustomerName.Size = new System.Drawing.Size(80, 30);
             this.lblCustomerName.TabIndex = 0;
             this.lblCustomerName.Text = "Tên khách";
             this.lblCustomerName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -823,11 +823,11 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel3.Controls.Add(this.txtEmployeeId);
             this.panel3.Controls.Add(this.lblEmployeeId);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(327, 47);
+            this.panel3.Location = new System.Drawing.Point(327, 40);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(5, 10, 0, 10);
-            this.panel3.Size = new System.Drawing.Size(328, 47);
+            this.panel3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.panel3.Size = new System.Drawing.Size(328, 40);
             this.panel3.TabIndex = 3;
             // 
             // txtEmployeeId
@@ -837,7 +837,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtEmployeeId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmployeeId.FillColor = System.Drawing.Color.White;
             this.txtEmployeeId.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEmployeeId.Location = new System.Drawing.Point(85, 10);
+            this.txtEmployeeId.Location = new System.Drawing.Point(85, 0);
             this.txtEmployeeId.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmployeeId.Maximum = 2147483647D;
             this.txtEmployeeId.Minimum = -2147483648D;
@@ -846,7 +846,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtEmployeeId.Radius = 10;
             this.txtEmployeeId.ReadOnly = true;
             this.txtEmployeeId.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtEmployeeId.Size = new System.Drawing.Size(243, 27);
+            this.txtEmployeeId.Size = new System.Drawing.Size(243, 30);
             this.txtEmployeeId.Style = Sunny.UI.UIStyle.Colorful;
             this.txtEmployeeId.StyleCustomMode = true;
             this.txtEmployeeId.TabIndex = 1;
@@ -856,10 +856,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             // lblEmployeeId
             // 
             this.lblEmployeeId.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblEmployeeId.Location = new System.Drawing.Point(5, 10);
+            this.lblEmployeeId.Location = new System.Drawing.Point(5, 0);
             this.lblEmployeeId.Margin = new System.Windows.Forms.Padding(0);
             this.lblEmployeeId.Name = "lblEmployeeId";
-            this.lblEmployeeId.Size = new System.Drawing.Size(80, 27);
+            this.lblEmployeeId.Size = new System.Drawing.Size(80, 30);
             this.lblEmployeeId.TabIndex = 0;
             this.lblEmployeeId.Text = "Mã n.viên";
             this.lblEmployeeId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -870,11 +870,11 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel2.Controls.Add(this.cboCustomerId);
             this.panel2.Controls.Add(this.lblCustomerId);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 47);
+            this.panel2.Location = new System.Drawing.Point(0, 40);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 5, 10);
-            this.panel2.Size = new System.Drawing.Size(327, 47);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 5, 10);
+            this.panel2.Size = new System.Drawing.Size(327, 40);
             this.panel2.TabIndex = 2;
             // 
             // btnAddCustomer
@@ -886,7 +886,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnAddCustomer.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnAddCustomer.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnAddCustomer.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddCustomer.Location = new System.Drawing.Point(295, 10);
+            this.btnAddCustomer.Location = new System.Drawing.Point(292, 0);
             this.btnAddCustomer.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Radius = 10;
@@ -894,7 +894,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnAddCustomer.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnAddCustomer.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnAddCustomer.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
-            this.btnAddCustomer.Size = new System.Drawing.Size(27, 27);
+            this.btnAddCustomer.Size = new System.Drawing.Size(30, 30);
             this.btnAddCustomer.Style = Sunny.UI.UIStyle.Colorful;
             this.btnAddCustomer.StyleCustomMode = true;
             this.btnAddCustomer.TabIndex = 2;
@@ -908,14 +908,14 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.cboCustomerId.DropDownWidth = 190;
             this.cboCustomerId.FillColor = System.Drawing.Color.White;
             this.cboCustomerId.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboCustomerId.Location = new System.Drawing.Point(80, 10);
+            this.cboCustomerId.Location = new System.Drawing.Point(80, 0);
             this.cboCustomerId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboCustomerId.MinimumSize = new System.Drawing.Size(63, 0);
             this.cboCustomerId.Name = "cboCustomerId";
             this.cboCustomerId.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboCustomerId.Radius = 10;
             this.cboCustomerId.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.cboCustomerId.Size = new System.Drawing.Size(210, 27);
+            this.cboCustomerId.Size = new System.Drawing.Size(205, 30);
             this.cboCustomerId.Style = Sunny.UI.UIStyle.Colorful;
             this.cboCustomerId.StyleCustomMode = true;
             this.cboCustomerId.TabIndex = 1;
@@ -926,9 +926,9 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             // lblCustomerId
             // 
             this.lblCustomerId.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblCustomerId.Location = new System.Drawing.Point(0, 10);
+            this.lblCustomerId.Location = new System.Drawing.Point(0, 0);
             this.lblCustomerId.Name = "lblCustomerId";
-            this.lblCustomerId.Size = new System.Drawing.Size(80, 27);
+            this.lblCustomerId.Size = new System.Drawing.Size(80, 30);
             this.lblCustomerId.TabIndex = 0;
             this.lblCustomerId.Text = "Mã khách";
             this.lblCustomerId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -941,8 +941,8 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel1.Location = new System.Drawing.Point(327, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5, 10, 0, 10);
-            this.panel1.Size = new System.Drawing.Size(328, 47);
+            this.panel1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 10);
+            this.panel1.Size = new System.Drawing.Size(328, 40);
             this.panel1.TabIndex = 1;
             // 
             // dtpOrderTimeStamp
@@ -951,7 +951,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.dtpOrderTimeStamp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtpOrderTimeStamp.FillColor = System.Drawing.Color.White;
             this.dtpOrderTimeStamp.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpOrderTimeStamp.Location = new System.Drawing.Point(85, 10);
+            this.dtpOrderTimeStamp.Location = new System.Drawing.Point(85, 0);
             this.dtpOrderTimeStamp.Margin = new System.Windows.Forms.Padding(0);
             this.dtpOrderTimeStamp.MaxLength = 18;
             this.dtpOrderTimeStamp.MinimumSize = new System.Drawing.Size(63, 0);
@@ -962,7 +962,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.dtpOrderTimeStamp.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.dtpOrderTimeStamp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dtpOrderTimeStamp.ShowToday = true;
-            this.dtpOrderTimeStamp.Size = new System.Drawing.Size(243, 27);
+            this.dtpOrderTimeStamp.Size = new System.Drawing.Size(243, 30);
             this.dtpOrderTimeStamp.Style = Sunny.UI.UIStyle.Colorful;
             this.dtpOrderTimeStamp.StyleCustomMode = true;
             this.dtpOrderTimeStamp.SymbolDropDown = 61555;
@@ -975,10 +975,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             // lblOrderTimeStamp
             // 
             this.lblOrderTimeStamp.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblOrderTimeStamp.Location = new System.Drawing.Point(5, 10);
+            this.lblOrderTimeStamp.Location = new System.Drawing.Point(5, 0);
             this.lblOrderTimeStamp.Margin = new System.Windows.Forms.Padding(0);
             this.lblOrderTimeStamp.Name = "lblOrderTimeStamp";
-            this.lblOrderTimeStamp.Size = new System.Drawing.Size(80, 27);
+            this.lblOrderTimeStamp.Size = new System.Drawing.Size(80, 30);
             this.lblOrderTimeStamp.TabIndex = 0;
             this.lblOrderTimeStamp.Text = "Thời gian";
             this.lblOrderTimeStamp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -991,8 +991,8 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlOrderId.Location = new System.Drawing.Point(0, 0);
             this.pnlOrderId.Margin = new System.Windows.Forms.Padding(0);
             this.pnlOrderId.Name = "pnlOrderId";
-            this.pnlOrderId.Padding = new System.Windows.Forms.Padding(0, 10, 5, 10);
-            this.pnlOrderId.Size = new System.Drawing.Size(327, 47);
+            this.pnlOrderId.Padding = new System.Windows.Forms.Padding(0, 0, 5, 10);
+            this.pnlOrderId.Size = new System.Drawing.Size(327, 40);
             this.pnlOrderId.TabIndex = 0;
             // 
             // txtOrderId
@@ -1002,7 +1002,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtOrderId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtOrderId.FillColor = System.Drawing.Color.White;
             this.txtOrderId.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOrderId.Location = new System.Drawing.Point(80, 10);
+            this.txtOrderId.Location = new System.Drawing.Point(80, 0);
             this.txtOrderId.Margin = new System.Windows.Forms.Padding(0);
             this.txtOrderId.Maximum = 2147483647D;
             this.txtOrderId.Minimum = -2147483648D;
@@ -1011,7 +1011,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtOrderId.Radius = 10;
             this.txtOrderId.ReadOnly = true;
             this.txtOrderId.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtOrderId.Size = new System.Drawing.Size(242, 27);
+            this.txtOrderId.Size = new System.Drawing.Size(242, 30);
             this.txtOrderId.Style = Sunny.UI.UIStyle.Colorful;
             this.txtOrderId.StyleCustomMode = true;
             this.txtOrderId.TabIndex = 1;
@@ -1021,9 +1021,9 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             // lblOrderId
             // 
             this.lblOrderId.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblOrderId.Location = new System.Drawing.Point(0, 10);
+            this.lblOrderId.Location = new System.Drawing.Point(0, 0);
             this.lblOrderId.Name = "lblOrderId";
-            this.lblOrderId.Size = new System.Drawing.Size(80, 27);
+            this.lblOrderId.Size = new System.Drawing.Size(80, 30);
             this.lblOrderId.TabIndex = 0;
             this.lblOrderId.Text = "Mã đơn";
             this.lblOrderId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1045,13 +1045,13 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.flpChooseProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpChooseProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.flpChooseProduct.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.flpChooseProduct.Location = new System.Drawing.Point(10, 57);
+            this.flpChooseProduct.Location = new System.Drawing.Point(10, 50);
             this.flpChooseProduct.Margin = new System.Windows.Forms.Padding(0);
             this.flpChooseProduct.MinimumSize = new System.Drawing.Size(1, 1);
             this.flpChooseProduct.Name = "flpChooseProduct";
             this.flpChooseProduct.Padding = new System.Windows.Forms.Padding(10, 10, 2, 10);
             this.flpChooseProduct.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.flpChooseProduct.Size = new System.Drawing.Size(593, 507);
+            this.flpChooseProduct.Size = new System.Drawing.Size(593, 514);
             this.flpChooseProduct.Style = Sunny.UI.UIStyle.Colorful;
             this.flpChooseProduct.StyleCustomMode = true;
             this.flpChooseProduct.TabIndex = 1;
@@ -1066,8 +1066,8 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.pnlFilter.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFilter.Location = new System.Drawing.Point(10, 10);
             this.pnlFilter.Name = "pnlFilter";
-            this.pnlFilter.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
-            this.pnlFilter.Size = new System.Drawing.Size(593, 47);
+            this.pnlFilter.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.pnlFilter.Size = new System.Drawing.Size(593, 40);
             this.pnlFilter.TabIndex = 0;
             // 
             // btnAddProduct
@@ -1079,15 +1079,15 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnAddProduct.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnAddProduct.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnAddProduct.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddProduct.Location = new System.Drawing.Point(430, 10);
+            this.btnAddProduct.Location = new System.Drawing.Point(430, 0);
             this.btnAddProduct.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Radius = 10;
+            this.btnAddProduct.Radius = 28;
             this.btnAddProduct.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.btnAddProduct.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnAddProduct.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnAddProduct.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
-            this.btnAddProduct.Size = new System.Drawing.Size(120, 27);
+            this.btnAddProduct.Size = new System.Drawing.Size(120, 30);
             this.btnAddProduct.Style = Sunny.UI.UIStyle.Colorful;
             this.btnAddProduct.StyleCustomMode = true;
             this.btnAddProduct.TabIndex = 5;
@@ -1099,10 +1099,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.panel8.Controls.Add(this.btnSearchProduct);
             this.panel8.Controls.Add(this.txtSearchbox);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(140, 10);
+            this.panel8.Location = new System.Drawing.Point(140, 0);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.panel8.Size = new System.Drawing.Size(290, 27);
+            this.panel8.Size = new System.Drawing.Size(290, 30);
             this.panel8.TabIndex = 4;
             // 
             // btnSearchProduct
@@ -1113,8 +1113,8 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnSearchProduct.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnSearchProduct.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnSearchProduct.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
-            this.btnSearchProduct.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSearchProduct.Location = new System.Drawing.Point(248, 0);
+            this.btnSearchProduct.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSearchProduct.Location = new System.Drawing.Point(245, 0);
             this.btnSearchProduct.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnSearchProduct.Name = "btnSearchProduct";
             this.btnSearchProduct.Radius = 10;
@@ -1122,11 +1122,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.btnSearchProduct.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnSearchProduct.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnSearchProduct.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
-            this.btnSearchProduct.Size = new System.Drawing.Size(27, 27);
+            this.btnSearchProduct.Size = new System.Drawing.Size(30, 30);
             this.btnSearchProduct.Style = Sunny.UI.UIStyle.Colorful;
             this.btnSearchProduct.StyleCustomMode = true;
             this.btnSearchProduct.TabIndex = 3;
-            this.btnSearchProduct.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // txtSearchbox
             // 
@@ -1143,7 +1142,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.txtSearchbox.Name = "txtSearchbox";
             this.txtSearchbox.Radius = 10;
             this.txtSearchbox.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.txtSearchbox.Size = new System.Drawing.Size(230, 27);
+            this.txtSearchbox.Size = new System.Drawing.Size(225, 30);
             this.txtSearchbox.Style = Sunny.UI.UIStyle.Colorful;
             this.txtSearchbox.StyleCustomMode = true;
             this.txtSearchbox.TabIndex = 2;
@@ -1157,14 +1156,14 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             this.cboCategory.DropDownWidth = 190;
             this.cboCategory.FillColor = System.Drawing.Color.White;
             this.cboCategory.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboCategory.Location = new System.Drawing.Point(0, 10);
+            this.cboCategory.Location = new System.Drawing.Point(0, 0);
             this.cboCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboCategory.MinimumSize = new System.Drawing.Size(63, 0);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.cboCategory.Radius = 10;
             this.cboCategory.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.cboCategory.Size = new System.Drawing.Size(140, 27);
+            this.cboCategory.Size = new System.Drawing.Size(140, 30);
             this.cboCategory.Style = Sunny.UI.UIStyle.Colorful;
             this.cboCategory.StyleCustomMode = true;
             this.cboCategory.TabIndex = 2;

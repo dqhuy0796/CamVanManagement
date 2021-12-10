@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using WinFormsAppStoreManagement.BLL;
 using WinFormsAppStoreManagement.DAL;
 using WinFormsAppStoreManagement.UserInterface.Modals;
 
@@ -14,6 +15,10 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
         private Panel leftBorderBtn;
         private Form activeForm;
         private bool isDarkMode = false;
+        private Account currentAccount = new Account();
+        public bool isExit = true;
+        public event EventHandler LogOut;
+        public Account CurrentAccount { get => currentAccount; set => currentAccount = value; }
         #endregion
 
         #region Constructor
@@ -21,10 +26,9 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
         {
             InitializeComponent();
             Customize(false);
-            //lblUserDisplayName.Text = account.Username;
-            //lblUserRole.Text = account.Password;
-            //picAvatar.Image = account.Avatar;
-            Permission(account.TypeAccount);
+            Permission(AccountBLL.Instance.ConvertRoleToInt32(account.TypeAccount));
+            CurrentAccount = account;
+            LoadAccountData(CurrentAccount);
         }
         #endregion
 
@@ -310,6 +314,16 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
         }
         #endregion
 
+        #region Data Methods
+        private void LoadAccountData(Account account)
+        {
+            CurrentAccount = account;
+            lblUserDisplayName.Text = account.DisplayName;
+            lblUserRole.Text = account.TypeAccount;
+            picAvatar.Image = avatar.Image = account.Avatar;
+        }
+        #endregion
+
         #region Events
         private void btnAccount_Click(object sender, EventArgs e)
         {
@@ -371,14 +385,12 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
         {
             ActiveButton(sender, HtmlColor.blue);
             NowLoading();
-
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, HtmlColor.indigo);
             NowLoading();
-
         }
 
         private void picLogo_Click(object sender, EventArgs e)
@@ -399,10 +411,10 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
         private void btnAddOrderInMenu_Click(object sender, EventArgs e)
         {
             FormOrder frmAddProductToOder = new FormOrder(isDarkMode);
-            frmAddProductToOder.ShowDialog();
+            frmAddProductToOder.Show();
         }
 
-        private void uiSwitch1_ValueChanged_1(object sender, bool value)
+        private void Darkmode_Switch(object sender, bool value)
         {
             NowLoading();
 
@@ -420,8 +432,23 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
 
         private void FormMainMenu_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (isExit)
+            {
+                Application.Exit();
+            }
         }
         #endregion
+
+        private void btnUserInfo_Click(object sender, EventArgs e)
+        {
+            FormUser formUser = new FormUser(isDarkMode, CurrentAccount);
+            formUser.ShowDialog();
+            LoadAccountData(formUser.CurrentAccount);
+        }
+
+        private void avatar_Click(object sender, EventArgs e)
+        {
+            LogOut(this, new EventArgs());
+        }
     }
 }

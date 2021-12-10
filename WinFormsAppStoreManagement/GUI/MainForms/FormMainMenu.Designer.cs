@@ -378,7 +378,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.uiSwitch1.StyleCustomMode = true;
             this.uiSwitch1.TabIndex = 1;
             this.uiSwitch1.Text = "uiSwitch1";
-            this.uiSwitch1.ValueChanged += new Sunny.UI.UISwitch.OnValueChanged(this.uiSwitch1_ValueChanged_1);
+            this.uiSwitch1.ValueChanged += new Sunny.UI.UISwitch.OnValueChanged(this.Darkmode_Switch);
             // 
             // pnlTitlebar
             // 
@@ -496,7 +496,6 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.avatar.Dock = System.Windows.Forms.DockStyle.Right;
             this.avatar.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.avatar.Icon = Sunny.UI.UIAvatar.UIIcon.Image;
-            this.avatar.Image = ((System.Drawing.Image)(resources.GetObject("avatar.Image")));
             this.avatar.ImageOffset = new System.Drawing.Point(-2, -2);
             this.avatar.Location = new System.Drawing.Point(144, 16);
             this.avatar.MinimumSize = new System.Drawing.Size(1, 1);
@@ -504,8 +503,8 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.avatar.Size = new System.Drawing.Size(40, 40);
             this.avatar.Style = Sunny.UI.UIStyle.Custom;
             this.avatar.TabIndex = 0;
-            this.avatar.Text = "uiAvatar1";
             this.avatarTooltip.SetToolTip(this.avatar, "thông tin user");
+            this.avatar.Click += new System.EventHandler(this.avatar_Click);
             // 
             // picLogo
             // 
@@ -675,7 +674,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.tableLayoutPanel1.Controls.Add(this.pnlWorkedTimeToday, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pnlWorkedTimeInMonth, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 302);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 292);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -708,7 +707,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.lblSaleTodayTitle.Size = new System.Drawing.Size(140, 40);
             this.lblSaleTodayTitle.TabIndex = 2;
             this.lblSaleTodayTitle.Text = "150 sản phẩm";
-            this.lblSaleTodayTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSaleTodayTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // lblSaleTodaySubTitle
             // 
@@ -754,7 +753,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.lblSaleInMonthTitle.Size = new System.Drawing.Size(140, 40);
             this.lblSaleInMonthTitle.TabIndex = 2;
             this.lblSaleInMonthTitle.Text = "180.255.000 $";
-            this.lblSaleInMonthTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSaleInMonthTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // lblSaleInMonthSubTitle
             // 
@@ -800,7 +799,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.lblWorkedTimeTodayTitle.Size = new System.Drawing.Size(140, 40);
             this.lblWorkedTimeTodayTitle.TabIndex = 2;
             this.lblWorkedTimeTodayTitle.Text = "04 giờ 12 phút";
-            this.lblWorkedTimeTodayTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblWorkedTimeTodayTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // lblWorkedTimeTodaySubTitle
             // 
@@ -846,7 +845,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.lblWorkedTimeInMonthTitle.Size = new System.Drawing.Size(140, 40);
             this.lblWorkedTimeInMonthTitle.TabIndex = 2;
             this.lblWorkedTimeInMonthTitle.Text = "90.2 giờ";
-            this.lblWorkedTimeInMonthTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblWorkedTimeInMonthTitle.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // lblWorkedTimeInMonthSubTitle
             // 
@@ -878,8 +877,8 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.pnlUserInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlUserInfo.Location = new System.Drawing.Point(1, 201);
             this.pnlUserInfo.Name = "pnlUserInfo";
-            this.pnlUserInfo.Padding = new System.Windows.Forms.Padding(20, 10, 20, 10);
-            this.pnlUserInfo.Size = new System.Drawing.Size(200, 101);
+            this.pnlUserInfo.Padding = new System.Windows.Forms.Padding(20, 0, 20, 10);
+            this.pnlUserInfo.Size = new System.Drawing.Size(200, 91);
             this.pnlUserInfo.TabIndex = 3;
             // 
             // pnlSubUserInfo
@@ -889,7 +888,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.pnlSubUserInfo.Controls.Add(this.lblUserDisplayName);
             this.pnlSubUserInfo.Controls.Add(this.uiLedBulb1);
             this.pnlSubUserInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubUserInfo.Location = new System.Drawing.Point(20, 10);
+            this.pnlSubUserInfo.Location = new System.Drawing.Point(20, 0);
             this.pnlSubUserInfo.Name = "pnlSubUserInfo";
             this.pnlSubUserInfo.Size = new System.Drawing.Size(160, 48);
             this.pnlSubUserInfo.TabIndex = 3;
@@ -903,7 +902,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.lblUserRole.Name = "lblUserRole";
             this.lblUserRole.Size = new System.Drawing.Size(144, 24);
             this.lblUserRole.TabIndex = 6;
-            this.lblUserRole.Text = "Nhân viên quầy";
+            this.lblUserRole.Text = "role";
             this.lblUserRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblUserDisplayName
@@ -915,7 +914,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.lblUserDisplayName.Name = "lblUserDisplayName";
             this.lblUserDisplayName.Size = new System.Drawing.Size(144, 24);
             this.lblUserDisplayName.TabIndex = 5;
-            this.lblUserDisplayName.Text = "Nguyễn Thị Hoài";
+            this.lblUserDisplayName.Text = "name";
             this.lblUserDisplayName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLedBulb1
@@ -939,7 +938,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.btnUserInfo.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnUserInfo.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.btnUserInfo.ForeSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.btnUserInfo.Location = new System.Drawing.Point(20, 59);
+            this.btnUserInfo.Location = new System.Drawing.Point(20, 49);
             this.btnUserInfo.Margin = new System.Windows.Forms.Padding(0);
             this.btnUserInfo.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnUserInfo.Name = "btnUserInfo";
@@ -953,6 +952,7 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             this.btnUserInfo.StyleCustomMode = true;
             this.btnUserInfo.TabIndex = 2;
             this.btnUserInfo.Text = "Sửa thông tin";
+            this.btnUserInfo.Click += new System.EventHandler(this.btnUserInfo_Click);
             // 
             // pnlAvatar
             // 
@@ -968,7 +968,6 @@ namespace WinFormsAppStoreManagement.UserInterface.MainForms
             // picAvatar
             // 
             this.picAvatar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
             this.picAvatar.Location = new System.Drawing.Point(10, 10);
             this.picAvatar.Name = "picAvatar";
             this.picAvatar.Size = new System.Drawing.Size(180, 180);

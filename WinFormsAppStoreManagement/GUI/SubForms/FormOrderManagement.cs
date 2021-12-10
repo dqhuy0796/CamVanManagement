@@ -5,15 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using WinFormsAppStoreManagement.Controller;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.BLL;
+using WinFormsAppStoreManagement.DAL;
 using WinFormsAppStoreManagement.UserInterface.Modals;
 
 namespace WinFormsAppStoreManagement.UserInterface.SubForms
 {
     public partial class FormOrderManagement : Form
     {
+        #region Fields
         private bool isDarkMode = false;
+        #endregion
+
+        #region Constructors
         public FormOrderManagement()
         {
             InitializeComponent();
@@ -28,6 +32,8 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             LoadStatus();
             LoadOrderData();
         }
+        #endregion
+
         #region UI Methods
         public void Customize(bool darkmode)
         {
@@ -64,6 +70,11 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             pnlRight.FillColor = pnlHeader.FillColor;
             pnlLeft.FillColor = HtmlColor.dark1;
 
+            cboFilterByStatus.FillColor = HtmlColor.dark3;
+            cboFilterByTime.FillColor = cboFilterByStatus.FillColor;
+            cboFilterByStatus.ForeColor = HtmlColor.white;
+            cboFilterByTime.ForeColor = cboFilterByStatus.ForeColor;
+
             pnlHeader.RectColor = HtmlColor.border1;
             pnlFooter.RectColor = HtmlColor.border1;
             pnlLeft.RectColor = HtmlColor.border1;
@@ -73,8 +84,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dgvOrder.StripeEvenColor = HtmlColor.dark2;
             dgvOrder.StripeOddColor = HtmlColor.dark3;
             dgvOrder.ForeColor = HtmlColor.light1;
-
-            //uiPagination.FillColor = HtmlColor.dark3;
 
             lblOrderBy.ForeColor = HtmlColor.white;
 
@@ -91,6 +100,11 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             pnlRight.FillColor = pnlHeader.FillColor;
             pnlLeft.FillColor = HtmlColor.light3;
 
+            cboFilterByStatus.FillColor = HtmlColor.white;
+            cboFilterByTime.FillColor = cboFilterByStatus.FillColor;
+            cboFilterByStatus.ForeColor = HtmlColor.dark1;
+            cboFilterByTime.ForeColor = cboFilterByStatus.ForeColor;
+
             pnlHeader.RectColor = HtmlColor.border2;
             pnlFooter.RectColor = HtmlColor.border2;
             pnlLeft.RectColor = HtmlColor.border2;
@@ -100,8 +114,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dgvOrder.StripeEvenColor = HtmlColor.light2;
             dgvOrder.StripeOddColor = HtmlColor.white;
             dgvOrder.ForeColor = HtmlColor.dark1;
-
-            //uiPagination.FillColor = HtmlColor.dark3;
 
             lblOrderBy.ForeColor = HtmlColor.dark1;
 
@@ -144,13 +156,12 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
         {
             ToggleToolPanel();
         }
-        #endregion
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            FormOrder frmAddOrderToOder = new FormOrder(isDarkMode);
-            frmAddOrderToOder.ShowDialog();
-            LoadOrderData();
+            FormOrder formOrder = new FormOrder(isDarkMode);
+            formOrder.FormClosed += FormOrder_FormClosed;
+            formOrder.Show();
         }
 
         private void cboFilterByTime_SelectedIndexChanged(object sender, EventArgs e)
@@ -192,8 +203,14 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             Order order = new Order(orderId, customerId, customerName, employeeId, employeeName, time, status, description);
 
             FormOrder formOrder = new FormOrder(isDarkMode, order);
-            formOrder.ShowDialog();
+            formOrder.FormClosed += FormOrder_FormClosed;
+            formOrder.Show();
+        }
+
+        private void FormOrder_FormClosed(object sender, FormClosedEventArgs e)
+        {
             LoadOrderData();
         }
+        #endregion
     }
 }

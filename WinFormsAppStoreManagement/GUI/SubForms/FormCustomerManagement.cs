@@ -5,8 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using WinFormsAppStoreManagement.Controller;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.BLL;
+using WinFormsAppStoreManagement.DAL;
 using WinFormsAppStoreManagement.UserInterface.Modals;
 
 namespace WinFormsAppStoreManagement.UserInterface.SubForms
@@ -71,6 +71,13 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             pnlRight.FillColor = pnlHeader.FillColor;
             pnlLeft.FillColor = HtmlColor.dark1;
 
+            cboFilterByLevel.FillColor = HtmlColor.dark3;
+            cboFilterByTime.FillColor = cboFilterByLevel.FillColor;
+            cboFilterByPoint.FillColor = cboFilterByLevel.FillColor;
+            cboFilterByLevel.ForeColor = HtmlColor.white;
+            cboFilterByTime.ForeColor = cboFilterByLevel.ForeColor;
+            cboFilterByPoint.ForeColor = cboFilterByLevel.ForeColor;
+
             pnlHeader.RectColor = HtmlColor.border1;
             pnlFooter.RectColor = HtmlColor.border1;
             pnlLeft.RectColor = HtmlColor.border1;
@@ -95,6 +102,13 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             pnlFooter.FillColor = pnlHeader.FillColor;
             pnlRight.FillColor = pnlHeader.FillColor;
             pnlLeft.FillColor = HtmlColor.light3;
+
+            cboFilterByLevel.FillColor = HtmlColor.white;
+            cboFilterByTime.FillColor = cboFilterByLevel.FillColor;
+            cboFilterByPoint.FillColor = cboFilterByLevel.FillColor;
+            cboFilterByLevel.ForeColor = HtmlColor.dark1;
+            cboFilterByTime.ForeColor = cboFilterByLevel.ForeColor;
+            cboFilterByPoint.ForeColor = cboFilterByLevel.ForeColor;
 
             pnlHeader.RectColor = HtmlColor.border2;
             pnlFooter.RectColor = HtmlColor.border2;
@@ -190,8 +204,8 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormCustomer formCustomer = new FormCustomer(isDarkMode);
-            formCustomer.ShowDialog();
-            LoadCustomerData();
+            formCustomer.FormClosed += FormCustomer_FormClosed;
+            formCustomer.Show();
         }
 
         private void btnModify_Click(object sender, EventArgs e)
@@ -317,7 +331,12 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             Customer customer = new Customer(id, name, gender, CIC, birth, tel, address, level, point, description);
 
             FormCustomer formCustomer = new FormCustomer(isDarkMode, customer);
-            formCustomer.ShowDialog();
+            formCustomer.FormClosed += FormCustomer_FormClosed;
+            formCustomer.Show();
+        }
+
+        private void FormCustomer_FormClosed(object sender, FormClosedEventArgs e)
+        {
             LoadCustomerData();
         }
         #endregion

@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Text;
 
-namespace WinFormsAppStoreManagement.Database
+namespace WinFormsAppStoreManagement.DAL
 {
     public class Role
     {

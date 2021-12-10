@@ -4,8 +4,9 @@ using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using WinFormsAppStoreManagement.Controller;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.BLL;
+using WinFormsAppStoreManagement.DAL;
+using WinFormsAppStoreManagement.GUI.Modals;
 
 namespace WinFormsAppStoreManagement.UserInterface.Modals
 {
@@ -241,7 +242,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             }
             txtSubTotal.Text = sum.ToString("c0");
         }
-        private Order GetAllData()
+        private Order GetOrderData()
         {
             return new Order
                 (
@@ -254,6 +255,10 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
                     "Chưa hoàn thành",
                     txtOrderDescription.Text
                 );
+        }
+        private DataTable GetOrderDetailData()
+        {
+            return dgvOrderDetail.DataSource as DataTable;
         }
         private bool IsExistProductInOrderDetail(string id)
         {
@@ -335,7 +340,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
         }
         private int CreateNewOrder()
         {
-            if (OrderBLL.Instance.AddOrderToDatabase(GetAllData()) > 0)
+            if (OrderBLL.Instance.AddOrderToDatabase(GetOrderData()) > 0)
             {
                 string orderId = OrderBLL.Instance.GetLastestOrderFromDatabase();
                 int result = 0;
@@ -349,30 +354,34 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             }
             return 0;
         }
-        private int ModifyOrder()
+        private int ModifyOrder(Order order)
         {
-            string orderId = txtOrderId.Text;
-            if (OrderDetailBLL.Instance.DeleteOrderDetailFromDatabase(orderId) > 0)
+            if (OrderBLL.Instance.ModifyOrderInDatabase(GetOrderData()) > 0 && OrderDetailBLL.Instance.RemoveOrderDetailFromDatabase(order.OrderId) > 0)
             {
                 int result = 0;
                 DataTable saveData = dgvOrderDetail.DataSource as DataTable;
                 foreach (DataRow row in saveData.Rows)
                 {
                     OrderDetail detail = new OrderDetail(row);
-                    result = OrderDetailBLL.Instance.AddOrderDetailToDatabase(detail, orderId);
+                    result = OrderDetailBLL.Instance.AddOrderDetailToDatabase(detail, order.OrderId);
                 }
                 return result;
             }
             return 0;
         }
-        private int RemoveOrder()
+        private int RemoveOrder(string orderId)
         {
-            string orderId = txtOrderId.Text;
-            if (OrderDetailBLL.Instance.DeleteOrderDetailFromDatabase(orderId) > 0)
+            if (OrderDetailBLL.Instance.RemoveOrderDetailFromDatabase(orderId) > 0)
             {
                 return OrderBLL.Instance.RemoveOrderFromDatabase(orderId);
             }
             return 0;
+        }
+        private string GetNewOrderId()
+        {
+            string lastestOrderId = OrderBLL.Instance.GetLastestOrderFromDatabase();
+            double valueOfLastestOrderId = Convert.ToDouble(lastestOrderId.Substring(lastestOrderId.Length - 8)) + 1;
+            return "DH" + valueOfLastestOrderId.ToString("00000000");
         }
         #endregion
 
@@ -460,8 +469,33 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
         {
             if (dgvOrderDetail.Rows.Count > 0)
             {
-                this.Close();
+                if (IsValidData())
+                {
+                    if(txtOrderId.Text.Trim().Length != 10 || !txtOrderId.Text.Contains("DH"))
+                    {
+                        txtOrderId.Text = GetNewOrderId();
+                    }    
+                    FormBill formBill = new FormBill(isDarkMode, GetOrderData(), GetOrderDetailData());
+                    this.Hide();
+                    formBill.Show();
+                    formBill.CancelExportBill += FormBill_CancelExportBill;                    
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa nhập đủ dữ liệu!");
+                }
             }
+            else
+            {
+                MessageBox.Show("Đơn hàng phải có ít nhất một đơn vị mặt hàng (sản phẩm)!");
+            }
+        }
+
+        private void FormBill_CancelExportBill(object sender, EventArgs e)
+        {
+            (sender as FormBill).Close();
+            this.CenterToScreen();
+            this.Show();
         }
 
         private void btnSaveNewOrder_Click(object sender, EventArgs e)
@@ -497,7 +531,8 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             {
                 if (IsValidData())
                 {
-                    if (ModifyOrder() > 0)
+                    txtOrderDescription.Text = $"\nCập nhật lúc {DateTime.Now}";
+                    if (ModifyOrder(GetOrderData()) > 0)
                     {
                         MessageBox.Show("Đơn hàng đã được cập nhật trên cơ sở dữ liệu.");
                         this.Close();
@@ -522,7 +557,7 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
         {
             if (!string.IsNullOrWhiteSpace(txtOrderId.Text))
             {
-                if (RemoveOrder() > 0)
+                if (RemoveOrder(txtOrderId.Text) > 0)
                 {
                     MessageBox.Show("Đơn hàng đã được loại bỏ khỏi cơ sở dữ liệu.");
                     this.Close();
@@ -558,6 +593,5 @@ namespace WinFormsAppStoreManagement.UserInterface.Modals
             }
         }
         #endregion
-
     }
 }

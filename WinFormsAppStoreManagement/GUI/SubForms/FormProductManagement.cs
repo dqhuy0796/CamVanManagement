@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using WinFormsAppStoreManagement.Controller;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.BLL;
+using WinFormsAppStoreManagement.DAL;
 using WinFormsAppStoreManagement.UserInterface.Modals;
 
 namespace WinFormsAppStoreManagement.UserInterface.SubForms
@@ -70,6 +70,13 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             pnlRight.FillColor = pnlHeader.FillColor;
             pnlLeft.FillColor = HtmlColor.dark1;
 
+            cboFilterByStatus.FillColor = HtmlColor.dark3;
+            cboFilterByPrice.FillColor = cboFilterByStatus.FillColor;
+            cboFilterByCategory.FillColor = cboFilterByStatus.FillColor;
+            cboFilterByStatus.ForeColor = HtmlColor.white;
+            cboFilterByPrice.ForeColor = cboFilterByStatus.ForeColor;
+            cboFilterByCategory.ForeColor = cboFilterByStatus.ForeColor;
+
             pnlHeader.RectColor = HtmlColor.border1;
             pnlFooter.RectColor = HtmlColor.border1;
             pnlLeft.RectColor = HtmlColor.border1;
@@ -79,8 +86,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dgvProduct.StripeEvenColor = HtmlColor.dark2;
             dgvProduct.StripeOddColor = HtmlColor.dark3;
             dgvProduct.ForeColor = HtmlColor.light1;
-
-            //uiPagination.FillColor = HtmlColor.dark3;
 
             lblOrderBy.ForeColor = HtmlColor.white;
 
@@ -97,6 +102,13 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             pnlRight.FillColor = pnlHeader.FillColor;
             pnlLeft.FillColor = HtmlColor.light3;
 
+            cboFilterByStatus.FillColor = HtmlColor.white;
+            cboFilterByPrice.FillColor = cboFilterByStatus.FillColor;
+            cboFilterByCategory.FillColor = cboFilterByStatus.FillColor;
+            cboFilterByStatus.ForeColor = HtmlColor.dark1;
+            cboFilterByPrice.ForeColor = cboFilterByStatus.ForeColor;
+            cboFilterByCategory.ForeColor = cboFilterByStatus.ForeColor;
+
             pnlHeader.RectColor = HtmlColor.border2;
             pnlFooter.RectColor = HtmlColor.border2;
             pnlLeft.RectColor = HtmlColor.border2;
@@ -106,8 +118,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dgvProduct.StripeEvenColor = HtmlColor.light2;
             dgvProduct.StripeOddColor = HtmlColor.white;
             dgvProduct.ForeColor = HtmlColor.dark1;
-
-            //uiPagination.FillColor = HtmlColor.dark3;
 
             lblOrderBy.ForeColor = HtmlColor.dark1;
 
@@ -216,14 +226,19 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             Product product = new Product(id, name, image, unit, price, quantity, category, description);
 
             FormProduct formProduct = new FormProduct(isDarkMode, product);
-            formProduct.ShowDialog();
-            LoadProductData();
+            formProduct.FormClosed += FormProduct_FormClosed;
+            formProduct.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormProduct formProduct = new FormProduct(isDarkMode);
-            formProduct.ShowDialog();
+            formProduct.FormClosed += FormProduct_FormClosed;
+            formProduct.Show();
+        }
+
+        private void FormProduct_FormClosed(object sender, FormClosedEventArgs e)
+        {
             LoadProductData();
         }
 

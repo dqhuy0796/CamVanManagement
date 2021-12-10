@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
-using System.Text;
-using WinFormsAppStoreManagement.Database;
+using WinFormsAppStoreManagement.DAL;
 
-namespace WinFormsAppStoreManagement.Controller
+namespace WinFormsAppStoreManagement.BLL
 {
     class CustomerBLL
     {
@@ -42,6 +40,11 @@ namespace WinFormsAppStoreManagement.Controller
                 customers.Add(customer);
             }
             return customers;
+        }
+        public string GetCustomerLevelById(string customerId)
+        {
+            string query = "SELECT CustomerLevel FROM VW_ShowCustomerList WHERE CustomerId = @CustomerId";
+            return DataProvider.Instance.ExecuteScalar(query, new object[] { customerId }).ToString();
         }
         public int AddCustomerToDatabase(Customer Customer)
         {

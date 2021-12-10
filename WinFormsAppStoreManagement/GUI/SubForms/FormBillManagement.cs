@@ -1,16 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+using WinFormsAppStoreManagement.BLL;
+using WinFormsAppStoreManagement.DAL;
+using WinFormsAppStoreManagement.GUI.Modals;
+using WinFormsAppStoreManagement.UserInterface.Modals;
 
 namespace WinFormsAppStoreManagement.UserInterface.SubForms
 {
     public partial class FormBillManagement : Form
     {
+        #region Fields
         private bool isDarkMode = false;
+        #endregion
+
+        #region Constructors
         public FormBillManagement()
         {
             InitializeComponent();
@@ -23,6 +27,8 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             Customize(theme);
             LoadBillData();
         }
+        #endregion
+
         #region UI Methods
         public void Customize(bool darkmode)
         {
@@ -59,6 +65,11 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             pnlRight.FillColor = pnlHeader.FillColor;
             pnlLeft.FillColor = HtmlColor.dark1;
 
+            cboFilterByTotalPayment.FillColor = HtmlColor.dark3;
+            cboFilterByTime.FillColor = cboFilterByTotalPayment.FillColor;
+            cboFilterByTotalPayment.ForeColor = HtmlColor.white;
+            cboFilterByTime.ForeColor = cboFilterByTotalPayment.ForeColor;
+
             pnlHeader.RectColor = HtmlColor.border1;
             pnlFooter.RectColor = HtmlColor.border1;
             pnlLeft.RectColor = HtmlColor.border1;
@@ -68,8 +79,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dgvBill.StripeEvenColor = HtmlColor.dark2;
             dgvBill.StripeOddColor = HtmlColor.dark3;
             dgvBill.ForeColor = HtmlColor.light1;
-
-            //uiPagination.FillColor = HtmlColor.dark3;
 
             lblOrderBy.ForeColor = HtmlColor.white;
 
@@ -86,6 +95,11 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             pnlRight.FillColor = pnlHeader.FillColor;
             pnlLeft.FillColor = HtmlColor.light3;
 
+            cboFilterByTotalPayment.FillColor = HtmlColor.white;
+            cboFilterByTime.FillColor = cboFilterByTotalPayment.FillColor;
+            cboFilterByTotalPayment.ForeColor = HtmlColor.dark1;
+            cboFilterByTime.ForeColor = cboFilterByTotalPayment.ForeColor;
+
             pnlHeader.RectColor = HtmlColor.border2;
             pnlFooter.RectColor = HtmlColor.border2;
             pnlLeft.RectColor = HtmlColor.border2;
@@ -95,8 +109,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dgvBill.StripeEvenColor = HtmlColor.light2;
             dgvBill.StripeOddColor = HtmlColor.white;
             dgvBill.ForeColor = HtmlColor.dark1;
-
-            //uiPagination.FillColor = HtmlColor.dark3;
 
             lblOrderBy.ForeColor = HtmlColor.dark1;
 
@@ -120,8 +132,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
         #region Data Methods
         private void LoadBillData()
         {
-            string query = "SELECT * FROM VW_ShowBillList";
-            dgvBill.DataSource = Controller.DataProvider.Instance.ExecuteQuery(query);
+            dgvBill.DataSource = BillBLL.Instance.LoadBillList();
         }
         #endregion
 
@@ -129,6 +140,41 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
         private void btnToggleTool_Click(object sender, EventArgs e)
         {
             ToggleToolPanel();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            FormOrder formOrder = new FormOrder(isDarkMode);
+            formOrder.FormClosed += FormOrder_FormClosed;
+            formOrder.Show();
+        }
+
+        private void FormOrder_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoadBillData();
+        }
+
+        private void dgvBill_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dgvBill.CurrentCell.RowIndex;
+            string billId = dgvBill.Rows[index].Cells["colBillId"].Value.ToString();
+            string orderId = dgvBill.Rows[index].Cells["colOrderId"].Value.ToString();
+            DateTime time = Convert.ToDateTime(dgvBill.Rows[index].Cells["colBillTimeStamp"].Value);
+            double tax = Convert.ToDouble(dgvBill.Rows[index].Cells["colTax"].Value);
+            double discount = Convert.ToDouble(dgvBill.Rows[index].Cells["colDiscount"].Value);
+            double total = Convert.ToDouble(dgvBill.Rows[index].Cells["colTotalPayment"].Value);
+            string status = dgvBill.Rows[index].Cells["colStatus"].Value.ToString();
+            string description = dgvBill.Rows[index].Cells["colBillDescription"].Value.ToString();
+            Bill selectedBill = new Bill(billId, orderId, time, tax, discount, total, 0, description);
+
+            FormBill formBill = new FormBill(isDarkMode, selectedBill);
+            formBill.FormClosed += FormBill_FormClosed;
+            formBill.Show();
+        }
+
+        private void FormBill_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoadBillData();
         }
         #endregion
     }

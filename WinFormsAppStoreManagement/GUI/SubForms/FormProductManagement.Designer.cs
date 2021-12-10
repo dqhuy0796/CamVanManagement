@@ -34,13 +34,13 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductManagement));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProductManagement));
             this.pnlFooter = new Sunny.UI.UIPanel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.btnRemove = new Sunny.UI.UIButton();
@@ -64,6 +64,14 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.pnlContainer = new Sunny.UI.UIPanel();
             this.pnlLeft = new Sunny.UI.UIPanel();
             this.dgvProduct = new Sunny.UI.UIDataGridView();
+            this.colProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProductImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProductUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProductTotalQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlRight = new Sunny.UI.UIPanel();
             this.pnlTool = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -76,14 +84,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnToggleTool = new System.Windows.Forms.Button();
             this.uiComboBox2 = new Sunny.UI.UIComboBox();
             this.uiDatePicker1 = new Sunny.UI.UIDatePicker();
-            this.colProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductImage = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colCategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductTotalQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colProductDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlFooter.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -155,7 +155,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnRemove.Location = new System.Drawing.Point(10, 0);
             this.btnRemove.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Radius = 16;
+            this.btnRemove.Radius = 30;
             this.btnRemove.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnRemove.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
             this.btnRemove.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
@@ -187,7 +187,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnModify.Location = new System.Drawing.Point(10, 0);
             this.btnModify.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnModify.Name = "btnModify";
-            this.btnModify.Radius = 16;
+            this.btnModify.Radius = 30;
             this.btnModify.Size = new System.Drawing.Size(160, 32);
             this.btnModify.StyleCustomMode = true;
             this.btnModify.TabIndex = 1;
@@ -217,7 +217,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnAdd.Location = new System.Drawing.Point(10, 0);
             this.btnAdd.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Radius = 16;
+            this.btnAdd.Radius = 30;
             this.btnAdd.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.btnAdd.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnAdd.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
@@ -253,7 +253,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnBackToMainMenu.Location = new System.Drawing.Point(10, 0);
             this.btnBackToMainMenu.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
-            this.btnBackToMainMenu.Radius = 16;
+            this.btnBackToMainMenu.Radius = 30;
             this.btnBackToMainMenu.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.btnBackToMainMenu.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
             this.btnBackToMainMenu.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
@@ -297,7 +297,7 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.panel6.Location = new System.Drawing.Point(634, 14);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
-            this.panel6.Size = new System.Drawing.Size(100, 32);
+            this.panel6.Size = new System.Drawing.Size(110, 32);
             this.panel6.TabIndex = 17;
             // 
             // btnResetFilter
@@ -314,12 +314,12 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.btnResetFilter.Location = new System.Drawing.Point(0, 0);
             this.btnResetFilter.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnResetFilter.Name = "btnResetFilter";
-            this.btnResetFilter.Radius = 16;
+            this.btnResetFilter.Radius = 30;
             this.btnResetFilter.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.btnResetFilter.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(203)))), ((int)(((byte)(189)))));
             this.btnResetFilter.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.btnResetFilter.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
-            this.btnResetFilter.Size = new System.Drawing.Size(85, 32);
+            this.btnResetFilter.Size = new System.Drawing.Size(95, 32);
             this.btnResetFilter.Style = Sunny.UI.UIStyle.Colorful;
             this.btnResetFilter.StyleCustomMode = true;
             this.btnResetFilter.TabIndex = 1;
@@ -554,11 +554,13 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvProduct.RowHeadersVisible = false;
             this.dgvProduct.RowHeight = 120;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
             this.dgvProduct.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvProduct.RowTemplate.Height = 120;
             this.dgvProduct.SelectedIndex = -1;
+            this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvProduct.ShowGridLine = true;
             this.dgvProduct.Size = new System.Drawing.Size(813, 457);
             this.dgvProduct.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
@@ -566,6 +568,112 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.dgvProduct.StyleCustomMode = true;
             this.dgvProduct.TabIndex = 1;
             this.dgvProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellDoubleClick);
+            // 
+            // colProductId
+            // 
+            this.colProductId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colProductId.DataPropertyName = "ProductId";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colProductId.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colProductId.HeaderText = "Mã mặt hàng";
+            this.colProductId.MinimumWidth = 120;
+            this.colProductId.Name = "colProductId";
+            this.colProductId.ReadOnly = true;
+            this.colProductId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colProductId.ToolTipText = "Mã mặt hàng tự động";
+            this.colProductId.Width = 120;
+            // 
+            // colProductName
+            // 
+            this.colProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colProductName.DataPropertyName = "ProductName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colProductName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colProductName.FillWeight = 50F;
+            this.colProductName.HeaderText = "Tên mặt hàng";
+            this.colProductName.MinimumWidth = 160;
+            this.colProductName.Name = "colProductName";
+            this.colProductName.ReadOnly = true;
+            this.colProductName.ToolTipText = "Tên mặt hàng nè bạn nhỏ";
+            // 
+            // colProductImage
+            // 
+            this.colProductImage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colProductImage.DataPropertyName = "ProductImage";
+            this.colProductImage.HeaderText = "Hình ảnh";
+            this.colProductImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.colProductImage.MinimumWidth = 120;
+            this.colProductImage.Name = "colProductImage";
+            this.colProductImage.ReadOnly = true;
+            this.colProductImage.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colProductImage.Width = 120;
+            // 
+            // colCategoryName
+            // 
+            this.colCategoryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colCategoryName.DataPropertyName = "CategoryName";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colCategoryName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colCategoryName.FillWeight = 10F;
+            this.colCategoryName.HeaderText = "Danh mục";
+            this.colCategoryName.MinimumWidth = 120;
+            this.colCategoryName.Name = "colCategoryName";
+            this.colCategoryName.ReadOnly = true;
+            this.colCategoryName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCategoryName.ToolTipText = "Danh mục chung của loại mặt hàng này";
+            this.colCategoryName.Width = 120;
+            // 
+            // colProductUnit
+            // 
+            this.colProductUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colProductUnit.DataPropertyName = "ProductUnit";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colProductUnit.DefaultCellStyle = dataGridViewCellStyle6;
+            this.colProductUnit.HeaderText = "Đơn vị tính";
+            this.colProductUnit.MinimumWidth = 120;
+            this.colProductUnit.Name = "colProductUnit";
+            this.colProductUnit.ReadOnly = true;
+            this.colProductUnit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colProductUnit.ToolTipText = "Cách tính sao cho nó chuẩn hiểu chứ?";
+            this.colProductUnit.Width = 120;
+            // 
+            // colProductPrice
+            // 
+            this.colProductPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colProductPrice.DataPropertyName = "ProductPrice";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "C0";
+            dataGridViewCellStyle7.NullValue = "Unknown";
+            this.colProductPrice.DefaultCellStyle = dataGridViewCellStyle7;
+            this.colProductPrice.HeaderText = "Đơn giá";
+            this.colProductPrice.MinimumWidth = 120;
+            this.colProductPrice.Name = "colProductPrice";
+            this.colProductPrice.ReadOnly = true;
+            this.colProductPrice.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colProductPrice.Width = 120;
+            // 
+            // colProductTotalQuantity
+            // 
+            this.colProductTotalQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.colProductTotalQuantity.DataPropertyName = "ProductTotalQuantity";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colProductTotalQuantity.DefaultCellStyle = dataGridViewCellStyle8;
+            this.colProductTotalQuantity.HeaderText = "Số lượng";
+            this.colProductTotalQuantity.MinimumWidth = 120;
+            this.colProductTotalQuantity.Name = "colProductTotalQuantity";
+            this.colProductTotalQuantity.ReadOnly = true;
+            this.colProductTotalQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colProductTotalQuantity.ToolTipText = "Số lượng còn trong hệ thống để bán hiện nay";
+            this.colProductTotalQuantity.Width = 120;
+            // 
+            // colProductDescription
+            // 
+            this.colProductDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colProductDescription.DataPropertyName = "ProductDescription";
+            this.colProductDescription.HeaderText = "Mô tả";
+            this.colProductDescription.MinimumWidth = 160;
+            this.colProductDescription.Name = "colProductDescription";
+            this.colProductDescription.ReadOnly = true;
             // 
             // pnlRight
             // 
@@ -783,110 +891,6 @@ namespace WinFormsAppStoreManagement.UserInterface.SubForms
             this.uiDatePicker1.Text = "2021-10-17";
             this.uiDatePicker1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiDatePicker1.Value = new System.DateTime(2021, 10, 17, 18, 3, 32, 866);
-            // 
-            // colProductId
-            // 
-            this.colProductId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colProductId.DataPropertyName = "ProductId";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colProductId.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colProductId.HeaderText = "Mã mặt hàng";
-            this.colProductId.MinimumWidth = 120;
-            this.colProductId.Name = "colProductId";
-            this.colProductId.ReadOnly = true;
-            this.colProductId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colProductId.ToolTipText = "Mã mặt hàng tự động";
-            this.colProductId.Width = 120;
-            // 
-            // colProductName
-            // 
-            this.colProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colProductName.DataPropertyName = "ProductName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colProductName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colProductName.HeaderText = "Tên mặt hàng";
-            this.colProductName.MinimumWidth = 160;
-            this.colProductName.Name = "colProductName";
-            this.colProductName.ReadOnly = true;
-            this.colProductName.ToolTipText = "Tên mặt hàng nè bạn nhỏ";
-            // 
-            // colProductImage
-            // 
-            this.colProductImage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colProductImage.DataPropertyName = "ProductImage";
-            this.colProductImage.HeaderText = "Hình ảnh";
-            this.colProductImage.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.colProductImage.MinimumWidth = 120;
-            this.colProductImage.Name = "colProductImage";
-            this.colProductImage.ReadOnly = true;
-            this.colProductImage.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colProductImage.Width = 120;
-            // 
-            // colCategoryName
-            // 
-            this.colCategoryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCategoryName.DataPropertyName = "CategoryName";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colCategoryName.DefaultCellStyle = dataGridViewCellStyle5;
-            this.colCategoryName.FillWeight = 10F;
-            this.colCategoryName.HeaderText = "Danh mục";
-            this.colCategoryName.MinimumWidth = 120;
-            this.colCategoryName.Name = "colCategoryName";
-            this.colCategoryName.ReadOnly = true;
-            this.colCategoryName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCategoryName.ToolTipText = "Danh mục chung của loại mặt hàng này";
-            // 
-            // colProductUnit
-            // 
-            this.colProductUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colProductUnit.DataPropertyName = "ProductUnit";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colProductUnit.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colProductUnit.HeaderText = "Đơn vị tính";
-            this.colProductUnit.MinimumWidth = 120;
-            this.colProductUnit.Name = "colProductUnit";
-            this.colProductUnit.ReadOnly = true;
-            this.colProductUnit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colProductUnit.ToolTipText = "Cách tính sao cho nó chuẩn hiểu chứ?";
-            this.colProductUnit.Width = 120;
-            // 
-            // colProductPrice
-            // 
-            this.colProductPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colProductPrice.DataPropertyName = "ProductPrice";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "C0";
-            dataGridViewCellStyle7.NullValue = "Unknown";
-            this.colProductPrice.DefaultCellStyle = dataGridViewCellStyle7;
-            this.colProductPrice.HeaderText = "Đơn giá";
-            this.colProductPrice.MinimumWidth = 120;
-            this.colProductPrice.Name = "colProductPrice";
-            this.colProductPrice.ReadOnly = true;
-            this.colProductPrice.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colProductPrice.Width = 120;
-            // 
-            // colProductTotalQuantity
-            // 
-            this.colProductTotalQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colProductTotalQuantity.DataPropertyName = "ProductTotalQuantity";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colProductTotalQuantity.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colProductTotalQuantity.HeaderText = "Số lượng";
-            this.colProductTotalQuantity.MinimumWidth = 120;
-            this.colProductTotalQuantity.Name = "colProductTotalQuantity";
-            this.colProductTotalQuantity.ReadOnly = true;
-            this.colProductTotalQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colProductTotalQuantity.ToolTipText = "Số lượng còn trong hệ thống để bán hiện nay";
-            this.colProductTotalQuantity.Width = 120;
-            // 
-            // colProductDescription
-            // 
-            this.colProductDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colProductDescription.DataPropertyName = "ProductDescription";
-            this.colProductDescription.HeaderText = "Mô tả";
-            this.colProductDescription.MinimumWidth = 200;
-            this.colProductDescription.Name = "colProductDescription";
-            this.colProductDescription.ReadOnly = true;
             // 
             // FormProductManagement
             // 
